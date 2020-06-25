@@ -9,6 +9,15 @@ export default function Post({ postData }) {
       <br />
       {postData.date}
       <br />
+      <ul>
+      {postData.tags.map(tag => {
+        return (
+          <li key={tag}>
+            {tag}
+          </li>
+        )
+      })}
+      </ul>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </div>
   );

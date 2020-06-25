@@ -1,6 +1,8 @@
 ---
-title: "Second Blog Post"
-date: "2020-02-26"
+"title": "My first Blog with Markdown"
+"author": "Christian Kozalla"
+"date": "2020-02-23"
+"tags": ["HTML", "JSX", "React.js"]
 ---
 
 ## Second Blog Post

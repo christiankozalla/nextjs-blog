@@ -5,6 +5,8 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  color: #333;
+  background-color: #fafafa;
 }
 
 * {
@@ -15,6 +17,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+@media (max-width: 500px) {
+  html,
+  body {
+    font-size: 12px;
+  }
 }
