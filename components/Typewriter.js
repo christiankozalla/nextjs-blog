@@ -82,15 +82,6 @@ class Typewriter extends React.Component {
     }, this.period);
   }
 
-  componentDidMount() {
-    const Typer = new Typewriter("type", [
-      "Hi, I'm Christian",
-      "You found my Blog",
-      "Welcome to <DevDiary />",
-    ]);
-    Typer.type();
-  }
-
   render() {
     return (
       <div className="flex-text">
@@ -106,7 +97,7 @@ class Typewriter extends React.Component {
 
           .flex-text {
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
             justify-content: center;
           }
 

@@ -72,7 +72,14 @@ const Welcome = () => {
   // Invoke type method of BannerTxt inside useEffect
   useEffect(() => {
     window.setInterval(updateGradient, 10);
+    const Typer = new Typewriter("type", [
+      "Hi, I'm Christian",
+      "You found my Blog",
+      "Welcome to DevDiary",
+    ]);
+    Typer.type();
   });
+
   return (
     <div id="welcome">
       <div className="banner">
@@ -86,12 +93,22 @@ const Welcome = () => {
 
         .banner {
           position: relative;
-          top: 100px;
-          min-height: 300px;
+          top: 40px;
+          height: 150px;
           width: 100%;
-          height: 100%;
           text-align: center;
           padding: 0 3rem;
+        }
+
+        @media only screen and (max-width: 500px) {
+          h1 {
+            font-size: 2rem;
+          }
+          .banner {
+            top: 0;
+            padding: 0;
+            height: 5rem;
+          }
         }
       `}</style>
     </div>
