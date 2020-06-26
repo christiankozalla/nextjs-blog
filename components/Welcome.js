@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Typewriter from "./Typewriter";
 
 const Welcome = () => {
   // Define Array of Color-Triples
@@ -75,9 +76,7 @@ const Welcome = () => {
   return (
     <div id="welcome">
       <div className="banner">
-        <h1 id="type">
-          Welcome to {"<"}DevDiary{">"}
-        </h1>
+        <Typewriter />
       </div>
       <style jsx>{`
         .welcome {
@@ -93,36 +92,6 @@ const Welcome = () => {
           height: 100%;
           text-align: center;
           padding: 0 3rem;
-        }
-
-        #type {
-          text-shadow: 1px 1px #ddd;
-          font-family: "Dancing Script", "Anonymous Pro", monospace;
-          font-size: 300%;
-          overflow: hidden;
-          border-right: 0.1em solid transparent;
-          white-space: nowrap;
-          margin: 0 auto;
-          animation: typing 2.5s steps(20, end), blink-caret 0.6s step-end 7;
-        }
-
-        @keyframes typing {
-          from {
-            width: 0;
-          }
-          to {
-            width: 100%;
-          }
-        }
-
-        @keyframes blink-caret {
-          from,
-          to {
-            border-color: rgba(25, 25, 25, 0.5);
-          }
-          50% {
-            border-color: transparent;
-          }
         }
       `}</style>
     </div>
