@@ -72,18 +72,18 @@ const Welcome = () => {
   // Invoke type method of BannerTxt inside useEffect
   useEffect(() => {
     window.setInterval(updateGradient, 10);
-    const Typer = new Typewriter("type", [
-      "Hi, I'm Christian",
-      "You found my Blog",
-      "Welcome to DevDiary",
-    ]);
-    Typer.type();
   });
 
   return (
     <div id="welcome">
       <div className="banner">
-        <Typewriter />
+        <Typewriter
+          contentArr={[
+            "Hi, I'm Werner",
+            "You found my Blog",
+            "Welcome to DevDiary",
+          ]}
+        />
       </div>
       <style jsx>{`
         .welcome {

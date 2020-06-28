@@ -82,6 +82,11 @@ class Typewriter extends React.Component {
     }, this.period);
   }
 
+  componentDidMount() {
+    const Typer = new Typewriter("type", this.props.contentArr);
+    Typer.type();
+  }
+
   render() {
     return (
       <div className="flex-text">

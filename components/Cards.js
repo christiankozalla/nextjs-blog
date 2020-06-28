@@ -4,7 +4,7 @@ const Cards = ({ allPostsData }) => {
   return (
     <div className="flex-row">
       {allPostsData.map((post) => {
-        return <Singlecard post={post} />;
+        return <Singlecard key={post.id} post={post} />;
       })}
       <style jsx>{`
         div {
