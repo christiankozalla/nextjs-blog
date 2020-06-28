@@ -72,6 +72,7 @@ const Container = ({ children }) => {
           .footer-content {
             width: 700px;
             margin: 0 auto;
+            font-size: 90%;
             display: flex;
             align-items: center;
             justify-content: center;

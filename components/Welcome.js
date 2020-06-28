@@ -44,7 +44,7 @@ const Welcome = () => {
     const color2 = `rgb(${r2},${g2},${b2})`;
 
     // Define styleObject for cssText
-    const styleObject = `width: 95%; border-radius: 10px; box-shadow: 2px 2px 3px grey; background: linear-gradient(35deg, ${color1} 0%, ${color2} 100%);`;
+    const styleObject = `width: 100%; border-radius: 10px; box-shadow: 2px 2px 3px grey; background: linear-gradient(35deg, ${color1} 0%, ${color2} 100%);`;
 
     // Set cssText on welcome Element
     welcome.style.cssText = styleObject;

@@ -10,7 +10,7 @@ const Cards = ({ allPostsData }) => {
         .flex-row {
           width: 100%;
           font-size: 85%;
-          padding: 0.5rem 0.5rem;
+          margin-top 0.7rem;
         }
       `}</style>
     </div>
