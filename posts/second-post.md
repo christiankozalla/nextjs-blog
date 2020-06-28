@@ -1,7 +1,9 @@
 ---
+"id": "second-post"
 "title": "My first Blog with Markdown"
-"author": "Christian Kozalla"
 "date": "2020-02-23"
+"author": "Christian Kozalla"
+"description": "This is the Description of the Second Post. Why is only the first Child of the Flex-Container rendered in the Center? Because of the missing unique key props..maybe?!"
 "tags": ["HTML", "JSX", "React.js"]
 ---
 

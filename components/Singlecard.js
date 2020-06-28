@@ -1,13 +1,19 @@
-const Singlecard = (props) => {
+const Singlecard = ({ post }) => {
   return (
-    <div>
-      <h1>{props.title}</h1>
-      <p>{props.description}</p>
-      <div>
-        {props.tags.map((tag) => {
+    <div key={post.id}>
+      <h2>{post.title}</h2>
+      <p>by {post.author}</p>
+      <p>{post.description}</p>
+      <p>
+        {post.tags.map((tag) => {
           return <span key={tag}>{tag}</span>;
         })}
-      </div>
+      </p>
+      <style jsx>{`
+        div {
+          padding: 0 1rem;
+        }
+      `}</style>
     </div>
   );
 };

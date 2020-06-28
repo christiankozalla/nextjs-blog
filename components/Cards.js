@@ -1,8 +1,19 @@
-import { getSortedPostsData } from "../lib/posts";
 import Singlecard from "./SingleCard";
 
-const Cards = (allPostsData) => {
-  return <SingleCard props={allPostsData} />;
+const Cards = ({ allPostsData }) => {
+  return (
+    <div className="flex-row">
+      {allPostsData.map((post) => {
+        return <Singlecard post={post} />;
+      })}
+      <style jsx>{`
+        div {
+          width: 100%;
+          font-size: 85%;
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default Cards;
