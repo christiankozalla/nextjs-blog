@@ -1,4 +1,4 @@
-import Singlecard from "./SingleCard";
+import Singlecard from "./Singlecard";
 
 const Cards = ({ allPostsData }) => {
   return (
