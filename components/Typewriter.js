@@ -1,7 +1,7 @@
 import React from "react";
 
 class Typewriter extends React.Component {
-  constructor(id, arr) {
+  constructor(id, arr, rounds = 1) {
     super(id, arr);
     if (process.browser) {
       this.el = document.getElementById(id);
@@ -11,6 +11,8 @@ class Typewriter extends React.Component {
       this.word = "";
       this.add = true;
       this.textArray = arr;
+      this.roundtrip = 0;
+      this.rounds = rounds;
     }
   }
 
@@ -53,12 +55,15 @@ class Typewriter extends React.Component {
         this.letter++;
       } else if (this.letter === this.word.length && this.add) {
         this.add = false;
+        this.roundtrip++;
         if (!document.getElementById("blinker").classList.contains("blink")) {
           document.getElementById("blinker").classList.add("blink");
         }
-        setTimeout(function () {
-          self.startDelete();
-        }, 3500);
+        if (this.roundtrip < this.rounds * this.textArray.length) {
+          setTimeout(function () {
+            self.startDelete();
+          }, 3500);
+        }
       }
     }
   }
@@ -83,7 +88,12 @@ class Typewriter extends React.Component {
   }
 
   componentDidMount() {
-    const Typer = new Typewriter("type", this.props.contentArr);
+    // Invoke Instance of Typewriter when mounting. Content and Number of rounds are passed via props where Component is added
+    const Typer = new Typewriter(
+      "type",
+      this.props.contentArr,
+      this.props.rounds
+    );
     Typer.type();
   }
 
@@ -103,7 +113,8 @@ class Typewriter extends React.Component {
           .flex-text {
             display: flex;
             flex-flow: row wrap;
-            justify-content: center;
+            justify-content: flex-start;
+            padding-left: 2.5em;
           }
 
           #type {

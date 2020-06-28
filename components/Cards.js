@@ -7,9 +7,10 @@ const Cards = ({ allPostsData }) => {
         return <Singlecard key={post.id} post={post} />;
       })}
       <style jsx>{`
-        div {
+        .flex-row {
           width: 100%;
           font-size: 85%;
+          padding: 0.5rem 0.5rem;
         }
       `}</style>
     </div>

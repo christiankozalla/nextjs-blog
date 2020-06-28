@@ -79,10 +79,11 @@ const Welcome = () => {
       <div className="banner">
         <Typewriter
           contentArr={[
-            "Hi, I'm Werner",
+            "Hi, I'm Christian",
             "You found my Blog",
             "Welcome to DevDiary",
           ]}
+          rounds={2}
         />
       </div>
       <style jsx>{`
@@ -96,7 +97,6 @@ const Welcome = () => {
           top: 40px;
           height: 150px;
           width: 100%;
-          text-align: center;
           padding: 0 3rem;
         }
 
