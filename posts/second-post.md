@@ -1,5 +1,4 @@
 ---
-"id": "second-post"
 "title": "My first Blog with Markdown"
 "date": "2020-02-23"
 "author": "Christian Kozalla"

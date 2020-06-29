@@ -12,6 +12,12 @@ const Cards = ({ allPostsData }) => {
           font-size: 85%;
           margin-top 0.7rem;
         }
+
+        @media (max-width: 500px) {
+          .flex-row {
+            font-size: 100%;
+          }
+        }
       `}</style>
     </div>
   );

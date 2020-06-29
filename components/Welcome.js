@@ -87,7 +87,7 @@ const Welcome = () => {
         />
       </div>
       <style jsx>{`
-        .welcome {
+        #welcome {
           border-radius: 10px;
           box-shadow: 2px 2px 3px grey;
         }

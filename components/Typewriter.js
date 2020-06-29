@@ -5,6 +5,7 @@ class Typewriter extends React.Component {
     super(id, arr);
     if (process.browser) {
       this.el = document.getElementById(id);
+      this.blinker = document.getElementById("blinker");
       this.period = 150;
       this.interval = "";
       this.deleteInterval = "";
@@ -56,8 +57,8 @@ class Typewriter extends React.Component {
       } else if (this.letter === this.word.length && this.add) {
         this.add = false;
         this.roundtrip++;
-        if (!document.getElementById("blinker").classList.contains("blink")) {
-          document.getElementById("blinker").classList.add("blink");
+        if (!this.blinker.classList.contains("blink")) {
+          this.blinker.classList.add("blink");
         }
         if (this.roundtrip < this.rounds * this.textArray.length) {
           setTimeout(function () {
@@ -70,8 +71,8 @@ class Typewriter extends React.Component {
 
   startDelete() {
     var self = this;
-    if (document.getElementById("blinker").classList.contains("blink")) {
-      document.getElementById("blinker").classList.remove("blink");
+    if (this.blinker.classList.contains("blink")) {
+      this.blinker.classList.remove("blink");
     }
     clearInterval(this.interval);
     this.interval = setInterval(function () {
@@ -89,12 +90,21 @@ class Typewriter extends React.Component {
 
   componentDidMount() {
     // Invoke Instance of Typewriter when mounting. Content and Number of rounds are passed via props where Component is added
-    const Typer = new Typewriter(
+    let Typer = new Typewriter(
       "type",
       this.props.contentArr,
       this.props.rounds
     );
     Typer.type();
+  }
+
+  componentWillUnmount() {
+    this.el = null;
+    this.blinker = null;
+    this.interval = "";
+    this.deleteInterval = "";
+    this.word = "";
+    this.add = false;
   }
 
   render() {
