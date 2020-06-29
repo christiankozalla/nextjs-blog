@@ -38,6 +38,9 @@ const Singlecard = ({ post }) => {
       </div>
       <style jsx>{`
         .card-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
           width: 50%;
           border-radius: 5px;
           margin: 0 0.3rem;
@@ -60,6 +63,7 @@ const Singlecard = ({ post }) => {
 
         #description {
           margin: 0.6rem;
+          flex-grow: 2;
         }
 
         span {

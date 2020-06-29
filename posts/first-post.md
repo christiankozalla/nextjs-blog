@@ -1,14 +1,20 @@
 ---
-"title": "My first Blog with Markdown"
-"date": "2019-02-23"
+"title": "My first Blog made with Next.js - DevDiary"
+"date": "2020-06-30"
 "author": "Christian Kozalla"
-"description": "This metadata Front Matter will be displayed in the Card Component on the Homepage, Blog and as Header inside on Top of the Post itself."
+"description": "I this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Each step is supplemented by Code Snippets and detailed description. I am aiming to inspire any Web Developer seeking to create their own Blog!"
 "imageUrl": "/images/Coding-Screen.jpg"
-"tags": ["JavaScript", "Next.js", "CSS3"]
+"tags": ["React", "Next.js", "Markdown"]
 ---
 
-## My First Blog Post
+## My first Blog made with Next.js
 
-Here is the text, Why is my Text Editor showing green-colored letters everywhere?
+I this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Each step is supplemented by Code Snippets and detailed description. I am aiming to inspire any Web Developer seeking to create their own Blog!
 
-**Sincerely, Christian**
+Since I, myself was heavily inspired by two existing Blogs especially in the early stage of creating my own, I'd like to say **Thank You!** Take a look at [leerob.io](https://leerob.io) and [christianalfoni.com](https://christianalfoni.com) whose Blogs are open source on GitHub as well!
+
+The birth of DevDiary (thats how I named this Blog) started with
+
+```
+npx create-next-app
+```
