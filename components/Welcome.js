@@ -2,6 +2,12 @@ import React, { useEffect } from "react";
 import Typewriter from "./Typewriter";
 
 const Welcome = () => {
+  useEffect(() => {
+    let colorInterval = setInterval(updateGradient, 10);
+    return () => {
+      clearInterval(colorInterval);
+    };
+  });
   // Define Array of Color-Triples
   const colors = new Array(
     [62, 35, 255],
@@ -15,7 +21,7 @@ const Welcome = () => {
   const colorIndices = [0, 1, 2, 3];
 
   // Define Transition Increment
-  const increment = 0.002;
+  let increment = 0.002;
 
   const updateGradient = () => {
     if (!document.getElementById("welcome")) {
@@ -68,11 +74,6 @@ const Welcome = () => {
         colors.length;
     }
   };
-
-  // Invoke type method of BannerTxt inside useEffect
-  useEffect(() => {
-    window.setInterval(updateGradient, 10);
-  });
 
   return (
     <div id="welcome">
