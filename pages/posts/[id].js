@@ -1,21 +1,19 @@
 import { getAllPostIds, getPostData } from "../../lib/posts";
+import ReactMarkdown from "react-markdown/with-html";
+import { Prism } from "../../utils/prism";
+
+const CodeBlock = ({ language, value }) => {
+  return <Prism language={language}>{value}</Prism>;
+};
 
 export default function Post({ postData }) {
+  // Include Post Header here with Image and FrontMatter
   return (
-    <div>
-      {postData.title}
-      <br />
-      {postData.id}
-      <br />
-      {postData.date}
-      <br />
-      <ul>
-        {postData.tags.map((tag) => {
-          return <li key={tag}>{tag}</li>;
-        })}
-      </ul>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-    </div>
+    <ReactMarkdown
+      escapeHtml={false}
+      source={postData.contentHtml}
+      renderers={{ code: CodeBlock }}
+    />
   );
 }
 
