@@ -19,5 +19,15 @@ Since I, myself was heavily inspired by two existing blogs especially in the ear
 The birth of my _DevDiary_ started with one single command.
 
 ```js
-$ npx create-next-app
+$ create-next-app
+```
+
+```js
+const testVariable = (props) => {
+  let module = css.module;
+  if (module) {
+    document.body.appendChild(module);
+    return true;
+  }
+};
 ```
