@@ -9,11 +9,14 @@
 
 ## My first Blog made with Next.js
 
-In this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Each step is supplemented by Code Snippets and detailed description. I am aiming to inspire any Web Developer seeking to create their own Blog!
+In this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Each step is supplemented by Code Snippets and detailed description. I am aiming to inspire anyone seeking to create their own Blog! First, I want to start you off with a simple truth I learnt while programming every day for the past months:
 
-Since I, myself was heavily inspired by two existing Blogs especially in the early stage of creating my own, I'd like to say **Thank You!** Please, take a look at [leerob.io](https://leerob.io) and [christianalfoni.com](https://christianalfoni.com) whose Blogs are open source on GitHub as well!
+> _"If you want to succeed, double your failure rate._"  
+>  Thomas J. Watson, former CEO of IBM
 
-The birth of DevDiary (thats how I named this Blog) started with one single Command.
+Since I, myself was heavily inspired by two existing blogs especially in the early stage of creating my own, I'd like to say **Thank You!** Please, take a look at [leerob.io](https://leerob.io) and [christianalfoni.com](https://christianalfoni.com) whose blogs are open source on GitHub as well!
+
+The birth of my _DevDiary_ started with one single command.
 
 ```js
 $ npx create-next-app
