@@ -18,6 +18,10 @@ Since I, myself was heavily inspired by two existing blogs especially in the ear
 
 The birth of my _DevDiary_ started with one single command.
 
+```sh
+$ npx create-next-app
+```
+
 ```javascript
 const testVariable = (props) => {
   let module = css.module;

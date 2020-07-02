@@ -1,7 +1,8 @@
-import { createElement } from "react";
+import Head from "next/head";
+import { createElement, Fragment } from "react";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import marksy from "marksy";
-import Prism from "prismjs";
+import Prism from "../../public/prism/prism";
 
 const compile = marksy({
   createElement,
@@ -12,7 +13,15 @@ const compile = marksy({
 
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
-  return <div>{compile(postData.content).tree}</div>;
+  return (
+    <Fragment>
+      <Head>
+        <title>{postData.title}</title>
+        <link href="/prism/prism.css" rel="stylesheet" />
+      </Head>
+      <div>{compile(postData.content).tree}</div>
+    </Fragment>
+  );
 }
 
 export async function getStaticPaths() {
