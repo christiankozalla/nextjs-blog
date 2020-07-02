@@ -1,5 +1,5 @@
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import ReactMarkdown from "react-markdown/with-html";
+import ReactMarkdown from "react-markdown";
 import Prism from "prismjs";
 
 const CodeBlock = (language, values) => {
@@ -9,11 +9,7 @@ const CodeBlock = (language, values) => {
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
   return (
-    <ReactMarkdown
-      escapeHtml={false} // Dangerous if content is user-generated
-      source={postData.contentHtml}
-      renderers={{ code: CodeBlock }}
-    />
+    <ReactMarkdown source={postData.content} renderers={{ code: CodeBlock }} />
   );
 }
 
