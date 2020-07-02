@@ -18,11 +18,7 @@ Since I, myself was heavily inspired by two existing blogs especially in the ear
 
 The birth of my _DevDiary_ started with one single command.
 
-```js
-$ create-next-app
-```
-
-```js
+```javascript
 const testVariable = (props) => {
   let module = css.module;
   if (module) {

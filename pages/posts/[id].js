@@ -1,16 +1,18 @@
+import { createElement } from "react";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import ReactMarkdown from "react-markdown";
+import marksy from "marksy";
 import Prism from "prismjs";
 
-const CodeBlock = (language, values) => {
-  return <Prism language={language}>{values}</Prism>;
-};
+const compile = marksy({
+  createElement,
+  highlight(language, code) {
+    return Prism.highlight(code, Prism.languages.javascript, language);
+  },
+});
 
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
-  return (
-    <ReactMarkdown source={postData.content} renderers={{ code: CodeBlock }} />
-  );
+  return <div>{compile(postData.content).tree}</div>;
 }
 
 export async function getStaticPaths() {
