@@ -186,7 +186,7 @@ const Welcome = () => {
     let b1 = Math.round(istep * a_a[2] + step * a_b[2]);
     const color1 = `rgb(${r1},${g1},${b1})`;
 
-    // Assamble styles, include already existing
+    // Assemble styles, include already existing
     const styles = `width: 100%; border-radius: 10px; box-shadow: 2px 2px 3px grey; background: linear-gradient(35deg, ${color1} 0%, ${color2} 100%);`;
 
     // Set styles on welcome element

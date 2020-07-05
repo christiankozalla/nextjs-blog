@@ -5,7 +5,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  * Based on https://github.com/chriskempson/tomorrow-theme
  * @author Rose Pritchard
  */
-
+/* 
 pre {
   background-color: #2d2d2d;
   padding: 1rem;
@@ -16,7 +16,7 @@ pre {
 code {
   color: rgba(255, 33, 90, 0.8);
 }
-
+ */
 code[class*="language-"],
 pre[class*="language-"] {
   color: #ccc;
@@ -45,6 +45,7 @@ pre[class*="language-"] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
+  border-radius: 0.5rem;
 }
 
 :not(pre) > code[class*="language-"],
@@ -54,6 +55,7 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
+  color: rgba(255, 33, 90, 0.8);
   padding: 0.1em;
   border-radius: 0.3em;
   white-space: normal;
