@@ -19,7 +19,13 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
         <link href="/prism/prism.css" rel="stylesheet" />
       </Head>
-      <div>{compile(postData.content).tree}</div>
+      <div className="post">{compile(postData.content).tree}</div>
+      <style jsx>{`
+        .post {
+          width: 100%;
+          word-wrap: break-word;
+        }
+      `}</style>
     </Fragment>
   );
 }

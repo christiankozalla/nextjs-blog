@@ -52,7 +52,6 @@ const Singlecard = ({ post }) => {
           flex-direction: row;
           justify-content: space-around;
           align-items: flex-end;
-          width: 100%;
           background-image: url(${post.imageUrl});
           background-position: center;
           background-size: cover;

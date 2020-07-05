@@ -14,6 +14,9 @@ const Container = ({ children }) => {
           }
 
           .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             flex: 1;
             height: 100%;
             width: 700px;
@@ -57,12 +60,6 @@ const Container = ({ children }) => {
 
           .nav-right a {
             margin-left: 1rem;
-          }
-
-          .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
           }
 
           .footer {

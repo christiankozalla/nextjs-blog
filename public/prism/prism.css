@@ -6,6 +6,17 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  * @author Rose Pritchard
  */
 
+pre {
+  background-color: #2d2d2d;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+}
+
+code {
+  color: rgba(255, 33, 90, 0.8);
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #ccc;
@@ -31,8 +42,6 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-  background-color: rgb(120, 120, 120);
-  border-radius: 0.5rem;
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
