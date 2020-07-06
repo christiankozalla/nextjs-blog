@@ -128,8 +128,7 @@ class Typewriter extends React.Component {
           .flex-text {
             display: flex;
             flex-flow: row wrap;
-            justify-content: flex-start;
-            padding-left: ${this.props.padding};
+            padding-left: ${this.props.center ? "0" : this.props.padding};
           }
 
           #type {
@@ -144,10 +143,6 @@ class Typewriter extends React.Component {
           @media (max-width: 500px) {
             h1 {
               font-size: 2em;
-            }
-
-            .flex-text {
-              align-items: flex-end;
             }
           }
         `}</style>

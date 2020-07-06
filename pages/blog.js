@@ -8,7 +8,7 @@ const Blog = ({ allPostsData }) => {
       <Welcome
         text={["Look Around", "Take your Time", "Enjoy DevDiary"]}
         rounds={1}
-        padding="7rem"
+        padding="5.5rem"
       />
       <Cards allPostsData={allPostsData} />
     </>

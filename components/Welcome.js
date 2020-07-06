@@ -82,6 +82,7 @@ const Welcome = (props) => {
           contentArr={props.text}
           rounds={props.rounds}
           padding={props.padding ? props.padding : "2.5rem"}
+          center={props.center}
         />
       </div>
       <style jsx>{`
@@ -91,8 +92,9 @@ const Welcome = (props) => {
         }
 
         .banner {
-          position: relative;
-          top: 40px;
+          display: flex;
+          justify-content: ${props.center ? "center" : "flex-start"};
+          align-items: center;
           height: 150px;
           width: 100%;
           padding: 0 3rem;
@@ -103,7 +105,6 @@ const Welcome = (props) => {
             font-size: 2rem;
           }
           .banner {
-            top: 0;
             padding: 0;
             height: 5rem;
           }
