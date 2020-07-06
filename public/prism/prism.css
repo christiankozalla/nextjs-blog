@@ -5,7 +5,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  * Based on https://github.com/chriskempson/tomorrow-theme
  * @author Rose Pritchard
  */
-/* 
+
 pre {
   background-color: #2d2d2d;
   padding: 1rem;
@@ -16,7 +16,7 @@ pre {
 code {
   color: rgba(255, 33, 90, 0.8);
 }
- */
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #ccc;
