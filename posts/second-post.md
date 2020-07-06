@@ -1,12 +1,14 @@
 ---
-"title": "My first Blog with Markdown"
-"date": "2020-02-23"
+"title": "Implement Banner with variable Text Input"
+"date": "2020-07-28"
 "author": "Christian Kozalla"
-"description": "This is the Description of the Second Post. Why is only the first Child of the Flex-Container rendered in the Center? Because of the missing unique key props..maybe?!"
+"description": "I am going to implement my Welcome Banner Component to be displayed on every page where the Typewriter Component shall be fed with variable Text Input based on the title of the page. The component will be included into the Container Component which already wraps the whole content section of DevDiary, making the Banner part of the ubiquous layout."
 "imageUrl": "/images/Coding-Screen-2.jpg"
-"tags": ["HTML", "JSX", "React.js"]
+"tags": ["JavaScript", "Banner", "React.js"]
 ---
 
-## Second Blog Post
+### Defining the Goals of Changing the Banner Component
 
-here is some Text
+### How should the Banner know on which page it is displayed, right now?
+
+### Show the final solution!

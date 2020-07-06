@@ -220,9 +220,37 @@ When the user navigates to another page, the `Welcome` c omponent unmounts, so t
 
 ### Blog Posts Overview with Cards
 
-I am a littlebit _proud_ of the `Card` layout that you can marvel at on the front-page, where each Post is advertised on a little card! I was starting with some simple goals:
+I am a littlebit proud of the `Card` layout that you can marvel at on the front-page, where each Post is advertised on a little card! I was starting with some simple goals:
 
 - Image captions as header of the card, size-independent of actual image size
 - Headline with metadata (date, author, avatar) below
 - A short description of the content, but with variable description length in different posts, the card's height should still be equal in all cards.
 - Footer with a like-button and views counter (functionality to be included...)
+
+I order to clip an image always to the same size no matter what size the original image has, the CSS properties `background-image`, `background-size` and `background-position` are very handy tools. Here is an example of my card images I worked in as headers.
+
+```css
+.card-header {
+  background-image: url(`${post.imageUrl}`);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+```
+
+`.card-header` refers to an Element, that includes the blog post hashtags that are display on top of the background image.
+
+```js
+<div className="card-header">
+  {post.tags.map((tag) => {
+    return <span key={tag}>{tag}</span>;
+  })}
+</div>
+```
+
+The `post` variable contains the metadata from the blog posts markdown front matter. I parse the front matter with [gray-matter](https://www.npmjs.com/package/gray-matter) which reads JSON-formatted front matter, too.  
+So, `background-image` puts an image on the corresponding element, without an actual `<img>` tag. When I put `width: 100%` on the element, it streches out to the full width of its parent, which is the `.card-container` in my case.
+
+I have read about an alternative CSS property `object-fit` to ensure images are always sized equally. Check out [moderncss.dev](https://moderncss.dev/) by Stephanie Eckles to blow your mind with simple solutions to old CSS problems. I found her Blog two days ago and already grew a huge fan!
+
+So that's it for now! Thanks for reading through my first Blog Post on `<DevDiary />`. You can find the source-code of `<DevDiary />` on [GitHub](https://github.com/christiankozalla/nextjs-blog).
