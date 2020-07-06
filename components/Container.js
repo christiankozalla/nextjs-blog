@@ -116,7 +116,7 @@ const Container = ({ children }) => {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href="/posts">
+          <Link href="/blog">
             <a>Blog</a>
           </Link>
           <Link href="/about">

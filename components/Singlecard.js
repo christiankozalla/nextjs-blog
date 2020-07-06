@@ -30,7 +30,7 @@ const Singlecard = ({ post }) => {
       <p id="description">{post.description}</p>
       <div className="flex-row between small-italic" id="footer">
         <p>
-          <FiEye /> XXX times
+          <FiEye /> -X- times
         </p>
         <p>
           <FiHeart />

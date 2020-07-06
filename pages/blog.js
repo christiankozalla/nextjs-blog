@@ -2,22 +2,18 @@ import { getSortedPostsData } from "../lib/posts";
 import Welcome from "../components/Welcome";
 import Cards from "../components/Cards";
 
-export default function Home({ allPostsData }) {
+const Blog = ({ allPostsData }) => {
   return (
     <>
       <Welcome
-        text={[
-          "Hey, I'm Christian",
-          "You found my Blog",
-          "Welcome to DevDiary",
-        ]}
-        rounds={2}
-        padding="3rem"
+        text={["Look Around", "Take your Time", "Enjoy DevDiary"]}
+        rounds={1}
+        padding="7rem"
       />
       <Cards allPostsData={allPostsData} />
     </>
   );
-}
+};
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -27,3 +23,5 @@ export async function getStaticProps() {
     },
   };
 }
+
+export default Blog;

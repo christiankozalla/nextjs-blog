@@ -2,7 +2,7 @@ import React from "react";
 
 class Typewriter extends React.Component {
   constructor(id, arr, rounds = 1) {
-    super(id, arr);
+    super(id, arr, rounds);
     if (process.browser) {
       this.el = document.getElementById(id);
       this.blinker = document.getElementById("blinker");
@@ -64,6 +64,8 @@ class Typewriter extends React.Component {
           setTimeout(function () {
             self.startDelete();
           }, 3500);
+        } else {
+          this.blinker.classList.add("blink");
         }
       }
     }
@@ -89,7 +91,10 @@ class Typewriter extends React.Component {
   }
 
   componentDidMount() {
-    // Invoke Instance of Typewriter when mounting. Content and Number of rounds are passed via props where Component is added
+    // Typewriter component is invoked with 3 props: contentArr, rounds, padding
+    // contentArr sets the contents which Typewriter types as an Array
+    // rounds sets how often the Typewriter types the contents; last item stays visible
+    // padding sets left padding in order to center text; props Type is String e.g. "4rem"
     let Typer = new Typewriter(
       "type",
       this.props.contentArr,
@@ -124,7 +129,7 @@ class Typewriter extends React.Component {
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-start;
-            padding-left: 2.5em;
+            padding-left: ${this.props.padding};
           }
 
           #type {
@@ -134,6 +139,16 @@ class Typewriter extends React.Component {
 
           .blink {
             visibility: hidden;
+          }
+
+          @media (max-width: 500px) {
+            h1 {
+              font-size: 2em;
+            }
+
+            .flex-text {
+              align-items: flex-end;
+            }
           }
         `}</style>
       </div>

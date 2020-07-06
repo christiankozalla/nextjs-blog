@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Typewriter from "./Typewriter";
 
-const Welcome = () => {
+const Welcome = (props) => {
   useEffect(() => {
     let colorInterval = setInterval(updateGradient, 10);
     return () => {
@@ -79,12 +79,9 @@ const Welcome = () => {
     <div id="welcome">
       <div className="banner">
         <Typewriter
-          contentArr={[
-            "Hi, I'm Christian",
-            "You found my Blog",
-            "Welcome to DevDiary",
-          ]}
-          rounds={2}
+          contentArr={props.text}
+          rounds={props.rounds}
+          padding={props.padding ? props.padding : "2.5rem"}
         />
       </div>
       <style jsx>{`
