@@ -11,7 +11,7 @@ const About = () => {
       />
       <style jsx>{`
         #avatar {
-          background-image: url("/images/Avatar_CK.jpg");
+          background-image: url("/images/Avatar_CK_mid.jpg");
           background-position: center;
           background-size: cover;
           height: 160px;
