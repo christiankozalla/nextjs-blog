@@ -2,7 +2,7 @@
 "title": "My first Blog made with Next.js - DevDiary"
 "date": "2020-06-30"
 "author": "Christian Kozalla"
-"description": "I this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Each step is supplemented by Code Snippets and detailed description. I'd like to inspire anyone seeking to create their own Blog!"
+"description": "In this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Each step is supplemented by Code Snippets and detailed description. I'd like to inspire anyone seeking to create their own Blog!"
 "imageUrl": "/images/Coding-Screen.jpg"
 "tags": ["React", "Next.js", "Markdown"]
 ---

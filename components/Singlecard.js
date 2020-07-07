@@ -2,7 +2,7 @@ import Link from "next/link";
 import { parseISO, format, fromUnixTime } from "date-fns";
 import { FiEye, FiHeart } from "react-icons/fi";
 
-import * as postdata from "../lib/database.json";
+import * as postdata from "../public/database.json";
 
 const Singlecard = ({ post }) => {
   const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");
