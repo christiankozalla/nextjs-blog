@@ -1,1 +1,14 @@
-{"data":[{"id":"first-next-js-blog-devdiary","views":7,"likes":1},{"id":"second-post","views":4,"likes":1}]}
+{
+  "data": [
+    {
+      "id": "first-next-js-blog-devdiary",
+      "views": 7,
+      "likes": 1
+    },
+    {
+      "id": "how-to-make-component-reusable-with-props",
+      "views": 4,
+      "likes": 1
+    }
+  ]
+}

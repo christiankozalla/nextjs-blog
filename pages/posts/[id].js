@@ -4,8 +4,6 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import marksy from "marksy";
 import Prism from "../../public/prism/prism";
 
-import { updateViews } from "../../lib/db-utils";
-
 const compile = marksy({
   createElement,
   highlight(language, code) {
@@ -41,7 +39,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  updateViews(params.id);
   const postData = await getPostData(params.id);
   return {
     props: {
