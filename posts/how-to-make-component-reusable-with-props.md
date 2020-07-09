@@ -161,5 +161,5 @@ class Typewriter extends React.Component {
 Thanks for reading through my post on how to make this `<Welcome />` component **reusable**. Have a nice day! ..and keep coding =)
 
 <p align="center">
-<img src="/images/Banner.gif" alt="Banner" />
+<img src="/images/Banner.gif" alt="Banner" width="90%" />
 </p>
