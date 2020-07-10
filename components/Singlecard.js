@@ -2,14 +2,8 @@ import Link from "next/link";
 import { parseISO, format, fromUnixTime } from "date-fns";
 import { FiEye, FiHeart } from "react-icons/fi";
 
-import * as postdata from "../public/database.json";
-
 const Singlecard = ({ post }) => {
   const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");
-
-  // Extract metadata from database.json
-  const metadata = postdata.data.filter((data) => data.id === post.id);
-  const metaObject = metadata[0];
 
   return (
     <div key={post.id} className="card-container">
@@ -36,10 +30,10 @@ const Singlecard = ({ post }) => {
       <p id="description">{post.description}</p>
       <div className="flex-row between small-italic" id="footer">
         <p>
-          <FiEye /> {metaObject.views} times
+          <FiEye /> -X- times
         </p>
         <p>
-          {metaObject.likes} <FiHeart />
+          <FiHeart />
         </p>
       </div>
       <style jsx>{`
