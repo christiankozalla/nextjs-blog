@@ -3,10 +3,7 @@ import { createElement, Fragment } from "react";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import marksy from "marksy";
 import Prism from "../../public/prism/prism";
-
-import useSWR from "swr";
-import fetcher from "../../lib/fetch";
-import { FiEye, FiHeart } from "react-icons/fi";
+import Fetchclientside from "../../components/Fetchclientside";
 
 const compile = marksy({
   createElement,
@@ -16,9 +13,6 @@ const compile = marksy({
 });
 
 export default function Post({ postData }) {
-  const { data, error } = useSWR(`/api/posts/${postData.id}`, fetcher);
-  let views = data ? data.views : "-";
-  let likes = data ? data.likes : "-";
   // Include Post Header here with Image and FrontMatter
   return (
     <Fragment>
@@ -29,12 +23,7 @@ export default function Post({ postData }) {
 
       <div className="post">{compile(postData.content).tree}</div>
       <div className="postStats">
-        <span>
-          {views} <FiEye />
-        </span>
-        <span>
-          {likes} <FiHeart />
-        </span>
+        <Fetchclientside id={postData.id} />
       </div>
       <style jsx>{`
         .post {
@@ -45,9 +34,9 @@ export default function Post({ postData }) {
           display: flex;
           width: 100%;
           justify-content: space-between;
-        }
-        span {
-          padding: 0 1rem;
+          border-radius: 3px;
+          box-shadow: 0 2px 5px;
+          padding: 0.2rem 1rem;
         }
       `}</style>
     </Fragment>

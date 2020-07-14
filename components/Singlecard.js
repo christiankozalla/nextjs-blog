@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { parseISO, format, fromUnixTime } from "date-fns";
-import { FiEye, FiHeart } from "react-icons/fi";
+import Fetchclientside from "../components/Fetchclientside";
 
 const Singlecard = ({ post }) => {
   const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");
@@ -29,12 +29,7 @@ const Singlecard = ({ post }) => {
       </div>
       <p id="description">{post.description}</p>
       <div className="flex-row between small-italic" id="footer">
-        <p>
-          <FiEye /> -X- times
-        </p>
-        <p>
-          <FiHeart />
-        </p>
+        <Fetchclientside id={post.id} />
       </div>
       <style jsx>{`
         .card-container {
