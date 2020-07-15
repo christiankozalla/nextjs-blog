@@ -4,7 +4,6 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import marksy from "marksy";
 import Prism from "../../public/prism/prism";
 import Fetchclientside from "../../components/Fetchclientside";
-import { mutate } from "swr";
 
 const compile = marksy({
   createElement,
@@ -12,21 +11,6 @@ const compile = marksy({
     return Prism.highlight(code, Prism.languages.javascript, language);
   },
 });
-
-const updateColumn = async (id, column) => {
-  try {
-    const endpoint = `http://localhost:3000/api/posts/${id}`;
-    await fetch(endpoint, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-      body: JSON.stringify({ column: column }),
-    });
-  } catch (error) {
-    console.error(error);
-  }
-};
 
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
@@ -41,15 +25,6 @@ export default function Post({ postData }) {
       <div className="post">{compile(postData.content).tree}</div>
       <div className="postStats">
         <Fetchclientside id={postData.id} />
-        <button
-          id="likeButton"
-          onClick={() => {
-            updateColumn(postData.id, "likes");
-            mutate(`/api/posts/${postData.id}`);
-          }}
-        >
-          iLike
-        </button>
       </div>
       <style jsx>{`
         .post {
