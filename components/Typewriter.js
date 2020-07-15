@@ -6,7 +6,7 @@ class Typewriter extends React.Component {
     if (process.browser) {
       this.el = document.getElementById(id);
       this.blinker = document.getElementById("blinker");
-      this.period = 150;
+      this.period = 90;
       this.interval = "";
       this.deleteInterval = "";
       this.word = "";
@@ -63,7 +63,7 @@ class Typewriter extends React.Component {
         if (this.roundtrip < this.rounds * this.textArray.length) {
           setTimeout(function () {
             self.startDelete();
-          }, 3500);
+          }, 2000);
         } else {
           this.blinker.classList.add("blink");
         }

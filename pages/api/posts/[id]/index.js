@@ -1,31 +1,44 @@
 import db from "../../../../lib/db";
 
 export default async function (req, res) {
-  return new Promise((resolve) => {
-    if (req.method === "GET") {
-      const id = req.query.id;
+  if (req.method === "GET") {
+    const id = req.query.id;
 
-      db.get(
-        "SELECT * FROM Posts WHERE id=$id",
-        {
-          $id: id,
-        },
-        (err, row) => {
-          if (err) {
-            console.error(err);
-            return resolve();
-          }
-          res.send(row);
-          resolve();
+    db.get(
+      "SELECT * FROM posts WHERE id=$id",
+      {
+        $id: id,
+      },
+      (err, row) => {
+        if (err) {
+          console.error(err);
         }
-      );
-    } else if (req.method === "PUT") {
-      // GET post by Id from TABLE POSTS e.g params.id
-      // example devdiary.com/blog/speacial-post will get likes with params.id = special-post
-      // UPDATE likes FROM POSTS
-      // res.send("OK")
-    } else {
-      // res.status(500).send()
-    }
-  });
+        res.json({ post: row });
+      }
+    );
+  } else if (req.method === "PUT") {
+    const id = req.query.id;
+    const column = req.body.column;
+    db.run(
+      `UPDATE posts SET ${column}=${column}+1 WHERE id=$id`,
+      {
+        $id: id,
+      },
+      (err) => {
+        if (err) {
+          res.status(400).json({ error: err.message });
+        }
+        res.json({ message: "Updated DB" });
+      }
+    );
+  } else {
+    console.log("Error, HTTP request method does not MATCH");
+    return;
+  }
 }
+
+export const config = {
+  api: {
+    externalResolver: true,
+  },
+};
