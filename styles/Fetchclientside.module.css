@@ -1,0 +1,30 @@
+.disableIcon {
+  pointer-events: none;
+}
+
+.btn {
+  border: none;
+  margin: 4px 0;
+  padding: 0 0.5rem;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+  background: rgba(255, 33, 90, 0.8);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+.btn:disabled {
+  background: rgba(255, 33, 90, 0.8);
+  border-radius: 3px;
+  transform: scale(0.97);
+  cursor: default;
+  color: black;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}

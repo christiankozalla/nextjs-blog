@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import React from "react";
 import useSWR, { mutate } from "swr";
+import styles from "../styles/Fetchclientside.module.css";
 import { FiEye, FiHeart } from "react-icons/fi";
 
 const updateColumn = async (id, column) => {
@@ -19,10 +20,9 @@ const updateColumn = async (id, column) => {
 
 export default function Fetchclientside({ id }) {
   const { data, error } = useSWR(`/api/posts/${id}`);
-  const likeBtnRef = useRef();
 
-  const onLikeBtnClick = () => {
-    likeBtnRef.current.setAttribute("disabled", true);
+  const onLikeBtnClick = (event) => {
+    event.currentTarget.setAttribute("disabled", true);
   };
 
   if (error) return <div>Failed to load DB</div>;
@@ -40,49 +40,26 @@ export default function Fetchclientside({ id }) {
   if (data)
     return (
       <>
-        <span>
-          {data.post.views} <FiEye />
-        </span>
         <button
-          type="button"
-          ref={likeBtnRef}
-          onClick={() => {
-            updateColumn(id, "likes");
+          className={styles.btn}
+          onClick={(event) => {
+            onLikeBtnClick(event);
+            updateColumn(id, "views");
             mutate(`/api/posts/${id}`);
-            onLikeBtnClick();
           }}
         >
-          {data.post.likes}
-          <FiHeart />
+          {data.post.views} <FiEye className={styles.disableIcon} />
         </button>
-        <style jsx>{`
-          button {
-            border: none;
-            margin: 0;
-            padding: 0 0.5rem;
-            text-decoration: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-          }
-
-          button:hover,
-          button:focus {
-            background: rgba(255, 33, 90, 0.8);
-            border-radius: 2px;
-            transition: background 250ms ease-in-out, transform 150ms ease;
-          }
-
-          button:disabled {
-            background: rgba(255, 33, 90, 0.8);
-            border-radius: 3px;
-            outline: 1px solid #fff;
-            color: black;
-          }
-
-          button:active {
-            transform: scale(0.95);
-          }
-        `}</style>
+        <button
+          className={styles.btn}
+          onClick={(event) => {
+            onLikeBtnClick(event);
+            updateColumn(id, "likes");
+            mutate(`/api/posts/${id}`);
+          }}
+        >
+          {data.post.likes} <FiHeart className={styles.disableIcon} />
+        </button>
       </>
     );
 }
