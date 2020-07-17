@@ -5,7 +5,9 @@ import { FiEye, FiHeart } from "react-icons/fi";
 
 const updateColumn = async (id, column) => {
   const currentWorkingDirectory = process.cwd();
-  const endpoint = `${currentWorkingDirectory}/pages/api/posts/${id}`;
+  const endpoint = `${currentWorkingDirectory}/api/posts/${id}`;
+
+  console.log(endpoint);
   try {
     await fetch(endpoint, {
       method: "PUT",
