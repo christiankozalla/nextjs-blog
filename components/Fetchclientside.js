@@ -4,8 +4,9 @@ import styles from "../styles/Fetchclientside.module.css";
 import { FiEye, FiHeart } from "react-icons/fi";
 
 const updateColumn = async (id, column) => {
+  const currentWorkingDirectory = process.cwd();
+  const endpoint = `${currentWorkingDirectory}/pages/api/posts/${id}`;
   try {
-    const endpoint = `http://localhost:3000/api/posts/${id}`;
     await fetch(endpoint, {
       method: "PUT",
       headers: {
@@ -29,10 +30,10 @@ export default function Fetchclientside({ id }) {
   if (!data)
     return (
       <>
-        <span>
+        <span className={styles.btn}>
           - <FiEye />
         </span>
-        <span>
+        <span className={styles.btn}>
           - <FiHeart />
         </span>
       </>
