@@ -40,7 +40,7 @@ export default async function (req, res) {
           res.status(400).json({ error: err.message });
         }
 
-        res.json({ message: "Updated DB" });
+        res.status(200).send();
       }
     );
   } else {
