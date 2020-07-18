@@ -9,7 +9,7 @@ const cors = initMiddleware(
 );
 
 export default async function (req, res) {
-  await runMiddleware(req, res, cors);
+  await cors(req, res);
 
   if (req.method === "GET") {
     const id = req.query.id;
