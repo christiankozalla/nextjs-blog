@@ -28,3 +28,10 @@
 .btn:active {
   transform: scale(0.95);
 }
+
+@media (max-width: 500px) {
+  .btn {
+    min-width: 50px;
+    min-height: 30px;
+  }
+}

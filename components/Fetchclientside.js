@@ -2,24 +2,7 @@ import React from "react";
 import useSWR, { mutate } from "swr";
 import styles from "../styles/Fetchclientside.module.css";
 import { FiEye, FiHeart } from "react-icons/fi";
-
-const updateColumn = async (id, column) => {
-  const currentWorkingDirectory = process.cwd();
-  const endpoint = `${currentWorkingDirectory}/api/posts/${id}`;
-
-  console.log(endpoint);
-  try {
-    await fetch(endpoint, {
-      method: "PUT",
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-      body: JSON.stringify({ column: column }),
-    });
-  } catch (error) {
-    console.error(error);
-  }
-};
+import { updateColumn } from "../lib/updateDb";
 
 export default function Fetchclientside({ id }) {
   const { data, error } = useSWR(`/api/posts/${id}`);
@@ -43,14 +26,7 @@ export default function Fetchclientside({ id }) {
   if (data)
     return (
       <>
-        <button
-          className={styles.btn}
-          onClick={(event) => {
-            onLikeBtnClick(event);
-            updateColumn(id, "views");
-            mutate(`/api/posts/${id}`);
-          }}
-        >
+        <button className={styles.btn}>
           {data.post.views} <FiEye className={styles.disableIcon} />
         </button>
         <button

@@ -1,9 +1,11 @@
 import Head from "next/head";
-import { createElement, Fragment } from "react";
+import React, { createElement, Fragment, useEffect } from "react";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import marksy from "marksy";
 import Prism from "../../public/prism/prism";
 import Fetchclientside from "../../components/Fetchclientside";
+import { updateColumn } from "../../lib/updateDb";
+import { mutate } from "swr";
 
 const compile = marksy({
   createElement,
@@ -14,6 +16,11 @@ const compile = marksy({
 
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
+
+  useEffect(() => {
+    updateColumn(postData.id, "views");
+    mutate(`/api/posts/${postData.id}`);
+  });
 
   return (
     <Fragment>
