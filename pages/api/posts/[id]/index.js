@@ -31,9 +31,10 @@ export default async function (req, res) {
     const column = req.body.column;
 
     db.run(
-      `UPDATE posts SET ${column}=${column}+1 WHERE id=$id`,
+      `UPDATE posts SET $column=$column+1 WHERE id=$id`,
       {
         $id: id,
+        $column: column,
       },
       (err) => {
         if (err) {
