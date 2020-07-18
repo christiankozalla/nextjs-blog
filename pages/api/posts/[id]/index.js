@@ -19,6 +19,8 @@ export default async function (req, res) {
   } else if (req.method === "PUT") {
     const id = req.query.id;
     const column = req.body.column;
+
+    console.log(`Received request with id ${id}`);
     db.run(
       `UPDATE posts SET ${column}=${column}+1 WHERE id=$id`,
       {
@@ -28,6 +30,7 @@ export default async function (req, res) {
         if (err) {
           res.status(400).json({ error: err.message });
         }
+        console.log("PUT SUCESSFUL");
         res.json({ message: "Updated DB" });
       }
     );
