@@ -1,6 +1,16 @@
 import db from "../../../../lib/db";
+import initMiddleware from "../../../../lib/init-middleware";
+import Cors from "cors";
+
+const cors = initMiddleware(
+  Cors({
+    methods: ["PUT"],
+  })
+);
 
 export default async function (req, res) {
+  await runMiddleware(req, res, cors);
+
   if (req.method === "GET") {
     const id = req.query.id;
 
@@ -20,7 +30,6 @@ export default async function (req, res) {
     const id = req.query.id;
     const column = req.body.column;
 
-    console.log(`Received request with id ${id}`);
     db.run(
       `UPDATE posts SET ${column}=${column}+1 WHERE id=$id`,
       {
@@ -30,7 +39,7 @@ export default async function (req, res) {
         if (err) {
           res.status(400).json({ error: err.message });
         }
-        console.log("PUT SUCESSFUL");
+
         res.json({ message: "Updated DB" });
       }
     );
