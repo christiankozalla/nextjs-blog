@@ -29,5 +29,7 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# prettier
+.prettierignore
+
 # Temp files
-test.js

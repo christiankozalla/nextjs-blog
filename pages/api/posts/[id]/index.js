@@ -4,36 +4,40 @@ export default async function (req, res) {
   if (req.method === "GET") {
     const id = req.query.id;
 
-    db.get(
-      "SELECT * FROM posts WHERE id=$id",
-      {
-        $id: id,
+    const params = {
+      TableName: "devdiary-posts",
+      Key: {
+        postId: id,
       },
-      (err, row) => {
-        if (err) {
-          console.error(err);
-        }
-        res.json({ post: row });
+    };
+
+    db.get(params, function (err, data) {
+      if (err) {
+        console.log("Error", err);
+      } else {
+        res.json(data.Item);
       }
-    );
+    });
   } else if (req.method === "PUT") {
     const id = req.query.id;
-    const column = req.body.column;
+    const attribute = req.body.attribute;
 
-    console.log(`Received request with id ${id}`);
-    db.run(
-      `UPDATE posts SET ${column}=${column}+1 WHERE id=$id`,
-      {
-        $id: id,
+    const params = {
+      TableName: "devdiary-posts",
+      Key: {
+        postId: id,
       },
-      (err) => {
-        if (err) {
-          res.status(400).json({ error: err.message });
-        }
-        console.log("PUT SUCESSFUL");
-        res.json({ message: "Updated DB" });
+      ExpressionAttributeValues: { ":inc": 1 },
+      UpdateExpression: `ADD ${attribute} :inc`,
+    };
+
+    db.update(params, function (err, data) {
+      if (err) {
+        console.log("Error", err);
+      } else {
+        console.log("Success, updated.", data);
       }
-    );
+    });
   } else {
     console.log("Error, HTTP request method does not MATCH");
     return;
