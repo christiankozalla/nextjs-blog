@@ -1,6 +1,16 @@
 import db from "../../../../lib/db";
+import initMiddleware from "../../../../lib/init-middleware";
+import Cors from "cors";
+
+const cors = initMiddleware(
+  Cors({
+    methods: ["GET", "PUT", "OPTIONS"],
+  })
+);
 
 export default async function (req, res) {
+  await cors(req, res);
+
   if (req.method === "GET") {
     const id = req.query.id;
 
