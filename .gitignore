@@ -33,3 +33,4 @@ yarn-error.log*
 .prettierignore
 
 # Temp files
+db-config.json

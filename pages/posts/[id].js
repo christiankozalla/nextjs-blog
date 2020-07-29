@@ -17,7 +17,7 @@ export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
 
   useEffect(() => {
-    updatePostAttribute(postData.id, "views");
+    updatePostAttribute(postData.id, "postViews");
   });
 
   return (

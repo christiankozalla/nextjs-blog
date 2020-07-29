@@ -30,16 +30,16 @@ export default function Fetchclientside({ id }) {
     return (
       <>
         <button className={styles.btn}>
-          {data.views} <FiEye className={styles.disableIcon} />
+          {data.postViews} <FiEye className={styles.disableIcon} />
         </button>
         <button
           className={styles.btn}
           onClick={(event) => {
             onLikeBtnClick(event);
-            updatePostAttribute(id, "likes");
+            updatePostAttribute(id, "postLikes");
           }}
         >
-          {!likeIsClicked ? data.likes : parseInt(data.likes, 10) + 1}{" "}
+          {!likeIsClicked ? data.postLikes : parseInt(data.postLikes, 10) + 1}{" "}
           <FiHeart className={styles.disableIcon} />
         </button>
       </>
