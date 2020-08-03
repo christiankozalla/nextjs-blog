@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { parseISO, format, fromUnixTime } from "date-fns";
+import { FiHeart, FiEye } from "react-icons/fi";
 import Fetchclientside from "../components/Fetchclientside";
 
 const Singlecard = ({ post }) => {
@@ -12,11 +13,16 @@ const Singlecard = ({ post }) => {
           return <span key={tag}>{tag}</span>;
         })}
       </div>
-      <Link href="/posts/[id]" as={`/posts/${post.id}`}>
-        <a>
-          <h2>{post.title}</h2>
-        </a>
-      </Link>
+      {post.isInDb ? (
+        <Link href="/posts/[id]" as={`/posts/${post.id}`}>
+          <a>
+            <h2>{post.title}</h2>
+          </a>
+        </Link>
+      ) : (
+        <h2>{post.title}</h2>
+      )}
+
       <div className="flex-row around">
         <p className="small-italic">
           {formattedDate} - by {post.author}
@@ -29,16 +35,27 @@ const Singlecard = ({ post }) => {
       </div>
       <p id="description">{post.description}</p>
       <div className="flex-row between small-italic" id="footer">
-        <Fetchclientside id={post.id} />
+        {post.isInDb ? (
+          <Fetchclientside id={post.id} />
+        ) : (
+          <>
+            <span>
+              <FiEye />
+            </span>
+            <span>
+              <FiHeart />
+            </span>
+          </>
+        )}
       </div>
       <style jsx>{`
         .card-container {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          width: 50%;
+          width: 48%;
           border-radius: 5px;
-          margin: 0 0.3rem;
+          margin: 0.3rem 0.3rem;
           box-shadow: 0 2px 5px #bbb;
         }
 
@@ -60,7 +77,7 @@ const Singlecard = ({ post }) => {
           flex-grow: 2;
         }
 
-        span {
+        .card-header span {
           padding: 0.3rem 0.7rem;
           margin: 0.3rem;
           border-radius: 3px;
@@ -118,15 +135,3 @@ const Singlecard = ({ post }) => {
 };
 
 export default Singlecard;
-
-/*
-        .card-container {
-          padding: 1rem 1rem;
-          width: 50%;
-        }
-
-        img {
-          max-width: 100%;
-          border-radius: 8px 8px 0 0;
-        }
-*/

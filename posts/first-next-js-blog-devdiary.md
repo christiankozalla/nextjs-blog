@@ -5,6 +5,7 @@
 "description": "In this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Starting with some basics about Next.js, then diving into the birth of the essential components. Each step is supplemented by Code Snippets and detailed description. I'd like to inspire anyone seeking to create their own Blog!"
 "imageUrl": "/images/Coding-Screen.jpg"
 "tags": ["React", "Next.js", "Markdown"]
+"isInDb": true
 ---
 
 ## My first Blog made with Next.js
