@@ -1,32 +1,41 @@
-import Head from "next/head";
-import React, { createElement, Fragment, useEffect } from "react";
-import { getAllPostIds, getPostData } from "../../lib/posts";
-import marksy from "marksy";
-import Prism from "../../public/prism/prism";
-import Fetchclientside from "../../components/Fetchclientside";
-import { updatePostAttribute } from "../../lib/update-db";
+import Head from 'next/head';
+import React, { createElement, Fragment, useEffect } from 'react';
+import { getAllPostIds, getPostData } from '../../lib/posts';
+import marksy from 'marksy';
+import Prism from '../../public/prism/prism';
+import Fetchclientside from '../../components/Fetchclientside';
+import { updatePostAttribute } from '../../lib/update-db';
+
+import BlogSeo from '../../components/BlogSeo';
 
 const compile = marksy({
   createElement,
   highlight(language, code) {
     return Prism.highlight(code, Prism.languages.javascript, language);
-  },
+  }
 });
 
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
 
+  // url for BlogSeo
+  const postUrl = `https://devdiary.me/posts/${postData.id}`;
   useEffect(() => {
-    updatePostAttribute(postData.id, "postViews");
+    updatePostAttribute(postData.id, 'postViews');
   });
 
   return (
     <Fragment>
       <Head>
-        <title>{postData.title}</title>
         <link href="/prism/prism.css" rel="stylesheet" />
       </Head>
-
+      {/* BlogSeo adds <NextSeo (openGraph) /> and <ArticleJsonLd /> to Blog Post */}
+      <BlogSeo
+        title={postData.title}
+        description={postData.description}
+        date={postData.date}
+        url={postUrl}
+      />
       <div className="post">{compile(postData.content).tree}</div>
       <div className="postStats">
         <Fetchclientside id={postData.id} />
@@ -60,7 +69,7 @@ export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {
     paths,
-    fallback: false,
+    fallback: false
   };
 }
 
@@ -68,7 +77,7 @@ export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
   return {
     props: {
-      postData,
-    },
+      postData
+    }
   };
 }

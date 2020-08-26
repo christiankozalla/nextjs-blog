@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+      <url>
+        <loc>https://devdiary.me/posts/aws-dynamodb-next-js-deploy-vercel</loc>
+      </url>
+        
+      <url>
+        <loc>https://devdiary.me/posts/first-next-js-blog-devdiary</loc>
+      </url>
+        
+      <url>
+        <loc>https://devdiary.me/posts/how-to-make-component-reusable-with-props</loc>
+      </url>
+        
+    </urlset>
+  
