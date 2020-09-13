@@ -5,16 +5,16 @@ import Cards from '../components/Cards';
 import { NextSeo } from 'next-seo';
 
 const url = 'https://devdiary.me';
-const title = 'Devdiary Blog';
+const title = 'Devdiary Blog - Christian Kozalla';
 const description =
-  "Here, I'm going to post relevant applied knowledge that I gain in learning Web Development.";
+  "Here, I'm going to post relevant applied knowledge that I gain in learning Web Development. Tutorials about NextJS, React, Node and vanilla JavaScript";
 const Blog = ({ allPostsData }) => {
   return (
     <>
       <NextSeo
         title={title}
         description={description}
-        canonical={url}
+        canonical={`${url}/blog`}
         openGraph={{ url, title, description }}
       />
       <Welcome

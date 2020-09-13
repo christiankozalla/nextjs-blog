@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FiGithub, FiMail, FiTwitter } from "react-icons/fi";
+import Link from 'next/link';
+import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 
 const Container = ({ children }) => {
   return (
@@ -124,10 +124,18 @@ const Container = ({ children }) => {
             <a>About</a>
           </Link>
           <div className="nav-right">
-            <a href="https://github.com/christiankozalla" target="_blank">
+            <a
+              href="https://github.com/christiankozalla"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FiGithub />
             </a>
-            <a href="https://twitter.com/CKozalla" target="_blank">
+            <a
+              href="https://twitter.com/CKozalla"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <FiTwitter />
             </a>
             <a href="mailto:christian.kozalla@gmail.com">
