@@ -8,7 +8,7 @@ const url = 'https://devdiary.me';
 const title = 'Devdiary Blog - Christian Kozalla';
 const description =
   "Here, I'm going to post relevant applied knowledge that I gain in learning Web Development. Tutorials about NextJS, React, Node and vanilla JavaScript";
-const Blog = ({ allPostsData }) => {
+const Posts = ({ allPostsData }) => {
   return (
     <>
       <NextSeo
@@ -36,4 +36,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Blog;
+export default Posts;

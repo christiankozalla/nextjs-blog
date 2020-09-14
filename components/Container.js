@@ -117,7 +117,7 @@ const Container = ({ children }) => {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href="/blog">
+          <Link href="/posts">
             <a>Blog</a>
           </Link>
           <Link href="/about">
@@ -148,10 +148,18 @@ const Container = ({ children }) => {
       <div className="footer">
         <div className="footer-content">
           2020 Christian Kozalla
-          <a href="https://github.com/christiankozalla" target="_blank">
+          <a
+            href="https://github.com/christiankozalla"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FiGithub />
           </a>
-          <a href="https://twitter.com/CKozalla" target="_blank">
+          <a
+            href="https://twitter.com/CKozalla"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FiTwitter />
           </a>
           <a href="mailto:christian.kozalla@gmail.com">

@@ -1,30 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+<img src="/favicons/android-chrome-192x192.png" alt="DevDiary Icon" />
+</p>
 
-## Getting Started
+<p align="center">
+## DevDiary
+## Personal Developer Blog by Christian Kozalla
+</p>
+======
 
-First, run the development server:
+This is the Codebase of my personal Developer Blog - DevDiary
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## DevDiary is powered by
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Next.js](https://nextjs.org) - a lightweight React Framework for Production
+- Markdown Integration with [Marksy](https://www.npmjs.com/package/marksy)
+- [AWS DynamoDB](https://aws.amazon.com/dynamodb/) - a fast and flexible NoSQL Database
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Pages Overview
 
-## Learn More
+======
 
-To learn more about Next.js, take a look at the following resources:
+- `pages/api/posts/[id]` - API routes powering Page Views and Likes connecting to AWS DynamoDB
+- `pages/posts/[id]` - Dynamic routes are generated for each blog post Markdown file
+- `pages/*` - Other static pages like _Home_, _Blog_ and _About_
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running DevDiary locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+=======
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<code>
+  <pre>
+    $ git clone https://github.com/christiankozalla/nextjs-blog.git
+    $ cd nextjs-blog
+    $ npm install   OR $ yarn
+    $ npm run dev   OR $ yarn dev
+  </pre>
+</code>
