@@ -1,13 +1,15 @@
-<p align="center">
-<img src="https://github.com/christiankozalla/nextjs-blog/blob/master/public/favicons/android-chrome-192x192.png" alt="DevDiary Icon" />
-</p>
-
-<p align="center">
-<h1>DevDiary <br/>
-Personal Developer Blog by Christian Kozalla</h1>
-</p>
-
-<h3>This is the Codebase of my personal Developer Blog - DevDiary</h3>
+<div align="center">
+  <img src="https://github.com/christiankozalla/nextjs-blog/blob/master/public/favicons/android-chrome-192x192.png" alt="DevDiary Icon" />
+  <h1>
+    DevDiary
+  </h1>
+  <br/>
+  <h2>
+    Personal Developer Blog by Christian Kozalla
+  </h2>
+  <br/>
+  <h3>This is the Codebase of my personal Developer Blog - DevDiary</h3>
+</div>
 
 ## DevDiary is powered by
 
@@ -23,7 +25,7 @@ Personal Developer Blog by Christian Kozalla</h1>
 
 ## Running DevDiary locally
 
-<code>
+<code style="line-height: 2.5em;">
   <pre>
     $ git clone https://github.com/christiankozalla/nextjs-blog.git
     $ cd nextjs-blog
