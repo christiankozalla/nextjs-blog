@@ -3,11 +3,9 @@
   <h1>
     DevDiary
   </h1>
-  <br/>
   <h2>
     Personal Developer Blog by Christian Kozalla
   </h2>
-  <br/>
   <h3>This is the Codebase of my personal Developer Blog - DevDiary</h3>
 </div>
 
