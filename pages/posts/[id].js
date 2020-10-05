@@ -1,19 +1,10 @@
 import Head from 'next/head';
 import React, { createElement, Fragment, useEffect } from 'react';
 import { getAllPostIds, getPostData } from '../../lib/posts';
-import marksy from 'marksy';
-import Prism from '../../public/prism/prism';
 import Fetchclientside from '../../components/Fetchclientside';
 import { updatePostAttribute } from '../../lib/update-db';
 
 import BlogSeo from '../../components/BlogSeo';
-
-const compile = marksy({
-  createElement,
-  highlight(language, code) {
-    return Prism.highlight(code, Prism.languages.javascript, language);
-  }
-});
 
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
@@ -36,7 +27,10 @@ export default function Post({ postData }) {
         date={postData.date}
         url={postUrl}
       />
-      <div className="post">{compile(postData.content).tree}</div>
+      <div
+        className="post"
+        dangerouslySetInnerHTML={{ __html: postData.content }}
+      ></div>
       <div className="postStats">
         <Fetchclientside id={postData.id} />
       </div>
