@@ -12,7 +12,7 @@
 ## DevDiary is powered by
 
 - [Next.js](https://nextjs.org) - a lightweight React Framework for Production
-- Markdown Integration with [Marksy](https://www.npmjs.com/package/marksy)
+- Markdown Integration with [Remark](https://www.npmjs.com/package/remark)
 - [AWS DynamoDB](https://aws.amazon.com/dynamodb/) - a fast and flexible NoSQL Database
 
 ## Pages Overview
