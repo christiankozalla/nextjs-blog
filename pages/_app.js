@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Head from "next/head";
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 
@@ -10,7 +11,7 @@ import SEO from '../next-seo.config';
 import Container from '../components/Container';
 import '../styles/global.css';
 
-export default ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }) => {
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -22,11 +23,18 @@ export default ({ Component, pageProps }) => {
     };
   }, [router.events]);
   return (
+    <>
+    <Head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </Head>
     <SWRConfig value={{ fetcher: fetch }}>
       <Container>
         <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </Container>
     </SWRConfig>
+    </>
   );
 };
+
+export default App;

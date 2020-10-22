@@ -75,6 +75,7 @@ const Singlecard = ({ post }) => {
         #description {
           margin: 0.6rem;
           flex-grow: 2;
+          line-height: 2;
         }
 
         .card-header span {

@@ -6,6 +6,7 @@ import { updatePostAttribute } from '../../lib/update-db';
 
 import BlogSeo from '../../components/BlogSeo';
 
+
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
 
@@ -18,7 +19,7 @@ export default function Post({ postData }) {
   return (
     <Fragment>
       <Head>
-        <link href="/prism/prism.css" rel="stylesheet" />
+        <link rel="stylesheet"  href="/prism/prism.css" />
       </Head>
       {/* BlogSeo adds <NextSeo (openGraph) /> and <ArticleJsonLd /> to Blog Post */}
       <BlogSeo
@@ -31,9 +32,14 @@ export default function Post({ postData }) {
         className="post"
         dangerouslySetInnerHTML={{ __html: postData.content }}
       ></div>
-      <div className="postStats">
-        <Fetchclientside id={postData.id} />
-      </div>
+      {postData.isInDb ? (
+        <div className="postStats">
+          <Fetchclientside id={postData.id} />
+        </div>
+      ) : (
+        <div className="postStats"></div>
+      )}
+
       <style jsx>{`
         .post {
           width: 100%;
