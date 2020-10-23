@@ -37,6 +37,18 @@ class MyDocument extends Document {
             sizes="16x16"
             type="image/png"
           />
+          <link
+            href="/favicons/android-chrome-192x192.png"
+            rel="icon"
+            sizes="192x192"
+            type="image/png"
+          />
+          <link
+            href="/favicons/android-chrome-512x512.png"
+            rel="icon"
+            sizes="512x512"
+            type="image/png"
+          />
         </Head>
         <body>
           <Main />

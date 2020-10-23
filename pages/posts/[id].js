@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React, { createElement, Fragment, useEffect } from 'react';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Fetchclientside from '../../components/Fetchclientside';
-import { updatePostAttribute } from '../../lib/update-db';
+import { updatePostAttribute } from '../../lib/updateDb';
 
 import BlogSeo from '../../components/BlogSeo';
 

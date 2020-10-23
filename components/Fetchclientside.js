@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import useSWR from "swr";
 import styles from "../styles/Fetchclientside.module.css";
 import { FiEye, FiHeart } from "react-icons/fi";
-import { updatePostAttribute } from "../lib/update-db";
+import { updatePostAttribute } from "../lib/updateDb";
 
 export default function Fetchclientside({ id }) {
   const { data, error } = useSWR(`/api/posts/${id}`);
