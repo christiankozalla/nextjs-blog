@@ -1,21 +1,9 @@
 import { getSortedPostsData } from "../lib/posts";
-import Welcome from "../components/Welcome";
-import Cards from "../components/Cards";
+import BlogOverview from "../components/BlogOverview";
 
 export default function Home({ allPostsData }) {
   return (
-    <>
-      <Welcome
-        text={[
-          "Hey, I'm Christian",
-          "You found my Blog",
-          "Welcome to DevDiary",
-        ]}
-        rounds={2}
-        padding="3rem"
-      />
-      <Cards allPostsData={allPostsData} />
-    </>
+      <BlogOverview allPostsData={allPostsData} />
   );
 }
 

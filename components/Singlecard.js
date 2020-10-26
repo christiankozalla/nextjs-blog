@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { parseISO, format, fromUnixTime } from "date-fns";
-import { FiHeart, FiEye } from "react-icons/fi";
-import Fetchclientside from "../components/Fetchclientside";
+import Link from 'next/link';
+import { parseISO, format } from 'date-fns';
+import { FiHeart, FiEye } from 'react-icons/fi';
+import Fetchclientside from '../components/Fetchclientside';
 
 const Singlecard = ({ post }) => {
   const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");

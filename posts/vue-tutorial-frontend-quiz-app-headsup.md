@@ -2,6 +2,7 @@
 'title': 'Vue.js Tutorial: Build a Frontend Quiz App'
 'date': '2020-10-23'
 'author': 'Christian Kozalla'
+'shortTitle': 'Learn the fundamental concepts of Vue.js and create a custom Quiz App along with me!'
 'description': 'In this tutorial you build a Quiz app and learn fundamental concepts of Vue.js. We cover Vue components, computed properties, methods, Vue directives and much more! Our Frontend Quiz app fetches data from an API and walks the user through an interactive Quiz! I have provided a GitHub repository with the Starter-Code for you! Have fun following along!'
 'imageUrl': '/images/vue-tutorial.png'
 'tags': ['Vue.js', 'Frontend', 'Tutorial']

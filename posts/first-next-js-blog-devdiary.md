@@ -1,11 +1,12 @@
 ---
-"title": "My first Blog made with Next.js - DevDiary"
-"date": "2020-06-30"
-"author": "Christian Kozalla"
-"description": "In this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Starting with some basics about Next.js, then diving into the birth of the essential components. Each step is supplemented by Code Snippets and detailed description. I'd like to inspire anyone seeking to create their own Blog!"
-"imageUrl": "/images/Coding-Screen.jpg"
-"tags": ["React", "Next.js", "Markdown"]
-"isInDb": true
+'title': 'My first Blog made with Next.js - DevDiary'
+'date': '2020-06-30'
+'author': 'Christian Kozalla'
+'shortTitle': 'To code the initial version of my Blog, I use Next.js, style-jsx, Markdown, and of course ... React!'
+'description': "In this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Starting with some basics about Next.js, then diving into the birth of the essential components. Each step is supplemented by Code Snippets and detailed description. I'd like to inspire anyone seeking to create their own Blog!"
+'imageUrl': '/images/Coding-Screen-opt.jpg'
+'tags': ['React', 'Next.js', 'Markdown']
+'isInDb': true
 ---
 
 ## My first Blog made with Next.js
@@ -48,8 +49,8 @@ $ npm run dev
 In addition to the page files, Next.js supports an \__app.js_ file to include components that should be rendered on every page. Think of a Navbar or a Footer that should be displayed throughout the whole App and always look the same. So you don't have to import that components to each page .. (imagine you make 10 - 15 individual pages). Just place it inside \__app.js_ inside the _/pages_ directory. Voila!
 
 ```js
-import Container from "../components/Container";
-import "../styles/global.css"; // Global styles
+import Container from '../components/Container';
+import '../styles/global.css'; // Global styles
 
 export default ({ Component, pageProps }) => (
   <Container>
@@ -70,8 +71,8 @@ $ touch Container.js
 ```
 
 ```js
-import Link from "next/link";
-import { FiGithub, FiTwitter } from "react-icons/fi"; // nice icons
+import Link from 'next/link';
+import { FiGithub, FiTwitter } from 'react-icons/fi'; // nice icons
 
 const Container = ({ children }) => {
   return (
@@ -143,7 +144,7 @@ As a Header beneath the Navigation I wanted an eye-catcher - something colorful 
 First, initialize the functional Compontent `Welcome` in _/compontents/Welcome.js_ and define a `colors` array where six arrays of _rgb-value-triples_ live in. In addition, we need a `step` variable which is incremented during each loop, and our `colorIndices`.
 
 ```js
-import React from "react";
+import React from 'react';
 
 const Welcome = () => {
   const colors = [
@@ -152,7 +153,7 @@ const Welcome = () => {
     [255, 35, 98],
     [45, 175, 230],
     [255, 0, 255],
-    [255, 128, 0],
+    [255, 128, 0]
   ];
 
   let step = 0;
@@ -202,7 +203,7 @@ const Welcome = () => {
 Now we only need to call `updateGradient` in a very short interval. We are going to call our function from `useEffect`, a React lifecycle Hook for functional components.
 
 ```js
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 const Welcome = () => {
   useEffect(() => {

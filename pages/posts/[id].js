@@ -32,13 +32,7 @@ export default function Post({ postData }) {
         className="post"
         dangerouslySetInnerHTML={{ __html: postData.content }}
       ></div>
-      {postData.isInDb ? (
-        <div className="postStats">
-          <Fetchclientside id={postData.id} />
-        </div>
-      ) : (
-        <div className="postStats"></div>
-      )}
+      <div className="postStats"></div>
 
       <style jsx>{`
         .post {

@@ -1,11 +1,12 @@
 ---
-"title": "Connect AWS DynamoDB to your Next.js App and Deploy on Vercel"
-"date": "2020-07-31"
-"author": "Christian Kozalla"
-"description": "In this post I'll walk you through setting up an AWS DynamoDB Database with your Next.js App and how to Deploy it easily on Vercel. We're going to go over the AWS Free Tier, different ways to configure DynamoDB and how to store the database's secret credentials safely in Next.js Framework and use them as Environment Variables. Last but not least, I'll show you how to manage Environment Variables on Vercel with either the Vercel CLI or the Dashboard on vercel.com. Have fun!"
-"imageUrl": "/images/Coding-Screen.jpg"
-"tags": ["DynamoDB", "Next.js", "Vercel"]
-"isInDb": true
+'title': 'Connect AWS DynamoDB to your Next.js App and Deploy on Vercel'
+'date': '2020-07-31'
+'author': 'Christian Kozalla'
+'shortTitle': 'Learn how to set up an AWS DynamoDB within your Next.js Application and how I deployed easily on Vercel.'
+'description': "In this post I'll walk you through setting up an AWS DynamoDB Database with your Next.js App and how to Deploy it easily on Vercel. We're going to go over the AWS Free Tier, different ways to configure DynamoDB and how to store the database's secret credentials safely in Next.js Framework and use them as Environment Variables. Last but not least, I'll show you how to manage Environment Variables on Vercel with either the Vercel CLI or the Dashboard on vercel.com. Have fun!"
+'imageUrl': '/images/Coding-Screen-opt.jpg'
+'tags': ['DynamoDB', 'Next.js', 'Vercel']
+'isInDb': true
 ---
 
 ## Connect AWS DynamoDB to your Next.js App and Deploy on Vercel
@@ -95,15 +96,15 @@ Now we can access these Environment Variables from `db.js` with `process.env.`
 
 ```js
 // db.js
-import AWS from "aws-sdk";
+import AWS from 'aws-sdk';
 
 AWS.config.update({
   accessKeyId: process.env.DB_ACCESS_KEY_ID,
   secretAccessKey: process.env.DB_SECRET_ACCESS_KEY,
-  region: "eu-central-1",
+  region: 'eu-central-1'
 });
 
-const db = new AWS.DynamoDB.DocumentClient({ apiVersion: "latest" });
+const db = new AWS.DynamoDB.DocumentClient({ apiVersion: 'latest' });
 
 export default db;
 ```
@@ -123,9 +124,9 @@ If you want to read/write to the Database outside your Next.js App, simply from 
 
 ```js
 // load credentials from a node module
-const AWS = require("aws-sdk");
+const AWS = require('aws-sdk');
 
-AWS.config.loadFromPath("./config.json");
+AWS.config.loadFromPath('./config.json');
 ```
 
 ### Query DynamoDB instance from Serverless Functions in Next.js
@@ -135,29 +136,29 @@ Since our Blog generates each post from a Markdown file, e. g. `aws-dynamodb-nex
 So we create the Serverless Functions in our API inside _/pages/api/posts/\[id]/index.js_
 
 ```js
-import db from "../../../../db";
+import db from '../../../../db';
 
 export default async function (req, res) {
   const id = req.query.id;
   // filter API requests by method
-  if (req.method === "GET") {
+  if (req.method === 'GET') {
     // Allow a blog post to get its number of likes and views
     const params = {
-      TableName: "posts",
+      TableName: 'posts',
       Key: {
-        postId: id,
-      },
+        postId: id
+      }
     };
 
     db.get(params, function (err, data) {
       if (err) {
-        console.log("Error", err);
+        console.log('Error', err);
       } else {
         // send the json response from the callback
         res.json(data.Item);
       }
     });
-  } else if (req.method === "PUT") {
+  } else if (req.method === 'PUT') {
     // Allow a blog post to update its likes (via a button) or views (on rendering)
   }
 }
@@ -232,23 +233,23 @@ The PUT request from `updatePostAttribute` reaches the API route `/api/posts/[id
 
 ```js
 // /pages/api/posts/[id]/index.js
-if (req.method === "PUT") {
+if (req.method === 'PUT') {
   const attribute = req.body.attribute;
 
   const params = {
-    TableName: "posts",
+    TableName: 'posts',
     Key: {
-      postId: id,
+      postId: id
     },
-    ExpressionAttributeValues: { ":inc": 1 },
-    UpdateExpression: `ADD ${attribute} :inc`,
+    ExpressionAttributeValues: { ':inc': 1 },
+    UpdateExpression: `ADD ${attribute} :inc`
   };
 
   db.update(params, function (err, data) {
     if (err) {
-      console.log("Error", err);
+      console.log('Error', err);
     } else {
-      console.log("Success, updated.", data);
+      console.log('Success, updated.', data);
     }
   });
 }
@@ -257,7 +258,7 @@ if (req.method === "PUT") {
 In production mode of my Blog _DevDiary_ I have implemented additional features to disable the Button on click or _immediatley counting +1 up_ without the need to wait for the Database response _a few milliseconds_. A similar solution would be to _display a spinner while the number of likes is updating_. But for now, I decided to go with immediate increment like this using `parseInt`:
 
 ```js
-import React, { useState } from "react";
+import React, { useState } from 'react';
 // inside function FetchFromDB
 const [isClicked, setIsClicked] = useState(false);
 

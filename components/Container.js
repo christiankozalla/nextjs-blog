@@ -27,8 +27,8 @@ const Container = ({ children }) => {
 
           .nav-wrapper {
             position: fixed;
-            width: 700px;
             top: 0;
+            width: 700px;
             background-color: #fafafa;
             margin: 0 auto;
             z-index: 2;
@@ -86,7 +86,7 @@ const Container = ({ children }) => {
             margin: 0 1rem;
           }
 
-          @media (max-width: 500px) {
+          @media (max-width: 700px) {
             .nav-wrapper {
               width: 100vw;
             }

@@ -1,5 +1,4 @@
 import { getSortedPostsData } from '../lib/posts';
-import Welcome from '../components/Welcome';
 import Cards from '../components/Cards';
 
 import { NextSeo } from 'next-seo';
@@ -16,11 +15,6 @@ const Posts = ({ allPostsData }) => {
         description={description}
         canonical={`${url}/blog`}
         openGraph={{ url, title, description }}
-      />
-      <Welcome
-        text={['Look Around', 'Take your Time', 'Enjoy DevDiary']}
-        rounds={1}
-        padding="5.5rem"
       />
       <Cards allPostsData={allPostsData} />
     </>

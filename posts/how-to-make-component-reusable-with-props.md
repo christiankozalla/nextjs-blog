@@ -1,11 +1,12 @@
 ---
-"title": "How to Make Banner a Reusable Component with Props"
-"date": "2020-07-08"
-"author": "Christian Kozalla"
-"description": "I am going to implement my Welcome Banner Component to be displayed on every page where the Typewriter Component shall be fed with variable Text Input based on the title of the page. The component will be included into the Container Component which already wraps the whole content section of DevDiary, making the Banner part of the ubiquous layout."
-"imageUrl": "/images/Coding-Screen-2.jpg"
-"tags": ["JavaScript", "Banner", "React"]
-"isInDb": true
+'title': 'How to Make Banner a Reusable Component with Props'
+'date': '2020-07-08'
+'author': 'Christian Kozalla'
+'shortTitle': "Making components reusable gives plenty of advantages: flexibility, maintainability and less code so you don't repeat yourself!"
+'description': 'I am going to implement my Welcome Banner Component to be displayed on every page where the Typewriter Component shall be fed with variable Text Input based on the title of the page. The component will be included into the Container Component which already wraps the whole content section of DevDiary, making the Banner part of the ubiquous layout.'
+'imageUrl': '/images/Coding-Screen-2-opt.jpg'
+'tags': ['JavaScript', 'Banner', 'React']
+'isInDb': true
 ---
 
 ### Defining the Goals of Changing the Banner Component
@@ -28,7 +29,7 @@ In `<Welcome />` I was calling a `<Typewriter />` instance like this:
 
 ```js
 <div className="banner">
-  <Typewriter content={["Hi, I am Christian", "Welcome to DevDiary"]} />
+  <Typewriter content={['Hi, I am Christian', 'Welcome to DevDiary']} />
 </div>
 ```
 
@@ -78,7 +79,7 @@ Now, inserting <Welcome /> is done like this:
 
 ```js
 <Welcome
-  text={["Hi, I am Fred", "Welcome to London"]}
+  text={['Hi, I am Fred', 'Welcome to London']}
   rounds={3}
   padding="3rem"
   center={false}
@@ -95,11 +96,11 @@ class Typewriter extends React.Component {
     super(id, arr, rounds);
     if (process.browser) {
       this.el = document.getElementById(id);
-      this.blinker = document.getElementById("blinker");
+      this.blinker = document.getElementById('blinker');
       this.period = 150;
-      this.interval = "";
-      this.deleteInterval = "";
-      this.word = "";
+      this.interval = '';
+      this.deleteInterval = '';
+      this.word = '';
       this.add = true;
       this.textArray = arr;
       this.roundtrip = 0;
@@ -113,7 +114,7 @@ class Typewriter extends React.Component {
     // content sets the contents which Typewriter types as an Array
     // rounds sets how often the Typewriter types the contents; last item stays visible
     // padding sets left padding in order to center text; props Type is String e.g. "4rem"
-    let Typer = new Typewriter("type", this.props.content, this.props.rounds);
+    let Typer = new Typewriter('type', this.props.content, this.props.rounds);
     Typer.type();
   }
 
@@ -124,7 +125,7 @@ class Typewriter extends React.Component {
         <h1 id="blinker">|</h1>
         <style jsx>{`
           h1 {
-            font-family: "Dancing Script", "Norican", "Roboto";
+            font-family: 'Dancing Script', 'Norican', 'Roboto';
             font-size: 3em;
             margin: 0;
             padding: 0;
@@ -133,7 +134,7 @@ class Typewriter extends React.Component {
           .flex-text {
             display: flex;
             flex-flow: row wrap;
-            padding-left: ${this.props.center ? "0" : this.props.padding};
+            padding-left: ${this.props.center ? '0' : this.props.padding};
           }
 
           #type {
