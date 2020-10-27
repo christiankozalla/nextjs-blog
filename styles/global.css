@@ -8,6 +8,7 @@ body {
   color: #333;
   background-color: #fafafa;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {

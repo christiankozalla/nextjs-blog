@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 const url = 'https://devdiary.me';
 const title = 'Devdiary Blog - Christian Kozalla';
 const description =
-  "Here, I'm going to post relevant applied knowledge that I gain in learning Web Development. Tutorials about NextJS, React, Node and vanilla JavaScript";
+  "My Blog DevDiary maps out my Journey to Web Development. Here, I'm going to share my experience with HTML, CSS and JavaScript as a Frontend Engineer. I've learnt React, Next.js and I'm jumping into Vue.js, right now!";
 const Posts = ({ allPostsData }) => {
   return (
     <>

@@ -4,6 +4,7 @@ import { parseISO, format } from 'date-fns';
 const BlogOverview = ({ allPostsData }) => {
   return (
     <div className="blog-overview-wrapper">
+      <h2>Latest Blog Posts</h2>
       {allPostsData.map((post) => {
         const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");
 
@@ -30,9 +31,15 @@ const BlogOverview = ({ allPostsData }) => {
         );
       })}
       <style jsx>{`
+        h2 {
+          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+          font-weight: 600;
+          padding-left: 0.5rem;
+          opacity: 0.8;
+        }
+
         .blog-overview-wrapper {
           width: 100%;
-          padding: 0.5rem;
         }
 
         .post-wrapper {
@@ -54,7 +61,7 @@ const BlogOverview = ({ allPostsData }) => {
         .small-italic {
           font-size: 80%;
           font-style: italic;
-          opacity: 0.6;
+          opacity: 0.7;
           white-space: nowrap;
         }
 

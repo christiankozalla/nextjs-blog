@@ -6,7 +6,6 @@ import { updatePostAttribute } from '../../lib/updateDb';
 
 import BlogSeo from '../../components/BlogSeo';
 
-
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
 
@@ -19,7 +18,7 @@ export default function Post({ postData }) {
   return (
     <Fragment>
       <Head>
-        <link rel="stylesheet"  href="/prism/prism.css" />
+        <link rel="stylesheet" href="/prism/prism.css" />
       </Head>
       {/* BlogSeo adds <NextSeo (openGraph) /> and <ArticleJsonLd /> to Blog Post */}
       <BlogSeo
@@ -32,20 +31,12 @@ export default function Post({ postData }) {
         className="post"
         dangerouslySetInnerHTML={{ __html: postData.content }}
       ></div>
-      <div className="postStats"></div>
+      <hr />
 
       <style jsx>{`
         .post {
           width: 100%;
           word-wrap: break-word;
-        }
-        .postStats {
-          display: flex;
-          width: 100%;
-          justify-content: space-between;
-          border-radius: 3px;
-          box-shadow: 0 2px 5px;
-          padding: 0.2rem 1rem;
         }
         #likeButton {
           padding: 0.6rem 1.4rem;
@@ -53,6 +44,12 @@ export default function Post({ postData }) {
           border-radius: 5px;
           color: white;
           background-color: rgba(255, 33, 90, 0.8);
+        }
+
+        hr {
+          width: 100%;
+          border-bottom: 2px solid black;
+          opacity: 0.3;
         }
       `}</style>
     </Fragment>
