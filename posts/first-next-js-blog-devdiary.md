@@ -4,7 +4,7 @@
 'author': 'Christian Kozalla'
 'shortTitle': 'To code the initial version of my Blog, I use Next.js, style-jsx, Markdown, and of course ... React!'
 'description': "In this post I'll walk you through each step of creating my first Blog with Next.js, React, style-jsx and Markdown. Starting with some basics about Next.js, then diving into the birth of the essential components. Each step is supplemented by Code Snippets and detailed description. I'd like to inspire anyone seeking to create their own Blog!"
-'imageUrl': '/images/Coding-Screen-opt.jpg'
+'imageUrl': '/images/first-next-js-blog-devdiary.jpg'
 'tags': ['React', 'Next.js', 'Markdown']
 'isInDb': true
 ---

@@ -4,7 +4,7 @@
 'author': 'Christian Kozalla'
 'shortTitle': 'Learn how to set up an AWS DynamoDB within your Next.js Application and how I deployed easily on Vercel.'
 'description': "In this post I'll walk you through setting up an AWS DynamoDB Database with your Next.js App and how to Deploy it easily on Vercel. We're going to go over the AWS Free Tier, different ways to configure DynamoDB and how to store the database's secret credentials safely in Next.js Framework and use them as Environment Variables. Last but not least, I'll show you how to manage Environment Variables on Vercel with either the Vercel CLI or the Dashboard on vercel.com. Have fun!"
-'imageUrl': '/images/Coding-Screen-opt.jpg'
+'imageUrl': '/images/aws-dynamodb-next-js-deploy-vercel.jpg'
 'tags': ['DynamoDB', 'Next.js', 'Vercel']
 'isInDb': true
 ---

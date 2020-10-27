@@ -4,7 +4,7 @@
 'author': 'Christian Kozalla'
 'shortTitle': "Making components reusable gives plenty of advantages: flexibility, maintainability and less code so you don't repeat yourself!"
 'description': 'I am going to implement my Welcome Banner Component to be displayed on every page where the Typewriter Component shall be fed with variable Text Input based on the title of the page. The component will be included into the Container Component which already wraps the whole content section of DevDiary, making the Banner part of the ubiquous layout.'
-'imageUrl': '/images/Coding-Screen-2-opt.jpg'
+'imageUrl': '/images/how-to-make-component-reusable-with-props.jpg'
 'tags': ['JavaScript', 'Banner', 'React']
 'isInDb': true
 ---

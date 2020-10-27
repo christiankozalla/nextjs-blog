@@ -1,8 +1,9 @@
+import { Imagebuilder } from 'aws-sdk';
 import { NextSeo, ArticleJsonLd } from 'next-seo';
 
-export default function BlogSeo({ title, description, date, url }) {
+export default function BlogSeo({ id, title, description, date, url }) {
   const datePublished = new Date(date).toISOString();
-
+  const imageUrl = `https://devdiary.me/images/${id}.jpg`;
   return (
     <>
       <NextSeo
@@ -14,7 +15,15 @@ export default function BlogSeo({ title, description, date, url }) {
           article: { publishedTime: datePublished },
           url,
           title,
-          description: description
+          description: description,
+          images: [
+            {
+              url: imageUrl,
+              width: 300,
+              height: 200,
+              alt: 'Featured Article Image'
+            }
+          ]
         }}
       />
       <ArticleJsonLd
@@ -26,6 +35,7 @@ export default function BlogSeo({ title, description, date, url }) {
         publisherName="Christian Kozalla"
         title={title}
         url={url}
+        images={[`https://devdiary.me/images/${id}.jpg`]}
       />
     </>
   );

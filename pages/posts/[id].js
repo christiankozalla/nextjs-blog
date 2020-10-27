@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import React, { createElement, Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { getAllPostIds, getPostData } from '../../lib/posts';
-import Fetchclientside from '../../components/Fetchclientside';
 import { updatePostAttribute } from '../../lib/updateDb';
 
 import BlogSeo from '../../components/BlogSeo';
@@ -16,7 +15,7 @@ export default function Post({ postData }) {
   });
 
   return (
-    <Fragment>
+    <>
       <Head>
         <link rel="stylesheet" href="/prism/prism.css" />
       </Head>
@@ -26,6 +25,7 @@ export default function Post({ postData }) {
         description={postData.description}
         date={postData.date}
         url={postUrl}
+        id={postData.id}
       />
       <div
         className="post"
@@ -52,7 +52,7 @@ export default function Post({ postData }) {
           opacity: 0.3;
         }
       `}</style>
-    </Fragment>
+    </>
   );
 }
 
