@@ -1,6 +1,6 @@
 const title = 'Christian Kozalla - Web Developer';
 const description =
-  'Self-taught Web Enthusiast, crazy about JavaScript, Front-end & Back-end Development';
+  'Self-taught Web Enthusiast, crazy about JavaScript & Frontend Frameworks like React.js, Vue.js, Next.js - blogging about his Journey to Web Development!';
 
 const SEO = {
   title,
@@ -15,13 +15,15 @@ const SEO = {
     images: [
       {
         url: 'https://devdiary.me/images/Avatar_CK_mid.jpg',
+        height: 300,
+        width: 300,
         alt: title
       }
     ]
   },
   twitter: {
-    handle: '@CKozalla',
-    site: '@CKozalla',
+    handle: '@ChristianKozal1',
+    site: '@ChristianKozal1',
     cardType: 'summary_large_image'
   }
 };

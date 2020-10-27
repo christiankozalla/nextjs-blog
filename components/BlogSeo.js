@@ -1,4 +1,3 @@
-import { Imagebuilder } from 'aws-sdk';
 import { NextSeo, ArticleJsonLd } from 'next-seo';
 
 export default function BlogSeo({ id, title, description, date, url }) {
