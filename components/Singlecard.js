@@ -8,13 +8,17 @@ const Singlecard = ({ post }) => {
 
   return (
     <div key={post.id} className="card-container">
-      <div className="card-header">
-        {post.tags.map((tag) => {
-          return <span key={tag}>{tag}</span>;
-        })}
-      </div>
+      {!post.imageUrl ? (
+        <div></div>
+      ) : (
+        <div className="card-header">
+          {post.tags.map((tag) => {
+            return <span key={tag}>{tag}</span>;
+          })}
+        </div>
+      )}
       {post.isInDb ? (
-        <Link href="/posts/[id]" as={`/posts/${post.id}`}>
+        <Link href={`/posts/${post.id}`}>
           <a>
             <h2>{post.title}</h2>
           </a>
