@@ -3,6 +3,19 @@
     <url>
       <loc>https://devdiary.me</loc>
     </url>
+
+    <url>
+      <loc>https://devdiary.me/posts</loc>
+    </url>
+
+    <url>
+      <loc>https://devdiary.me/about</loc>
+    </url>
+
+    <url>
+      <loc>https://devdiary.me/</loc>
+    </url>
+    
     
       <url>
         <loc>https://devdiary.me/posts/aws-dynamodb-next-js-deploy-vercel</loc>
@@ -17,11 +30,11 @@
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/vue-tutorial-frontend-quiz-app-headsup</loc>
+        <loc>https://devdiary.me/posts/picking-a-frontend-framework-as-beginner</loc>
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/why-is-react-so-damn-popular</loc>
+        <loc>https://devdiary.me/posts/vue-tutorial-frontend-quiz-app-headsup</loc>
       </url>
         
     </urlset>
