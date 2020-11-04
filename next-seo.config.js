@@ -1,20 +1,20 @@
-const title = 'Christian Kozalla - Web Developer';
+const title = "Christian Kozalla - Web Developer";
 const description =
-  'Self-taught Web Enthusiast, crazy about JavaScript & Frontend Frameworks like React.js, Vue.js, Next.js - blogging about his Journey to Web Development!';
+  "Self-taught Web Enthusiast, crazy about JavaScript & Frontend Frameworks like React.js, Vue.js, Next.js - blogging about his Journey to Web Development!";
 
 const SEO = {
   title,
   description,
-  canonical: 'https:devdiary.me',
+  canonical: "https:devdiary.me",
   openGraph: {
-    type: 'website',
-    locale: 'en_IT',
-    url: 'https://devdiary.me',
+    type: "website",
+    locale: "en_IT",
+    url: "https://devdiary.me",
     title,
     description,
     images: [
       {
-        url: 'https://devdiary.me/images/Avatar_CK_mid.jpg',
+        url: "https://devdiary.me/images/Avatar_CK_mid.jpg",
         height: 300,
         width: 300,
         alt: title
@@ -22,9 +22,9 @@ const SEO = {
     ]
   },
   twitter: {
-    handle: '@ChristianKozal1',
-    site: '@ChristianKozal1',
-    cardType: 'summary_large_image'
+    handle: "@CKozalla",
+    site: "@CKozalla",
+    cardType: "summary_large_image"
   }
 };
 
