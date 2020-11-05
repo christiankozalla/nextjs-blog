@@ -1,22 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 
 const Milestone = ({ milestone }) => {
   const iconElement = useRef(null);
+  const emptyMilestone = useRef(null);
 
   const onHoverHandler = () => {
     let icon = iconElement.current;
-    if (icon.classList.contains('hidden')) {
-      icon.classList.replace('hidden', 'show');
+    let milestone = emptyMilestone.current;
+    if (icon.classList.contains("hidden")) {
+      milestone.classList.replace("milestone", "hidden");
+      icon.classList.replace("hidden", "show");
     }
   };
 
   return (
     <div id="container" onMouseEnter={onHoverHandler}>
       <div className="milestone-wrapper">
-        <span className="milestone">
-          <span className="hidden" ref={iconElement}>
-            {milestone.icon}
-          </span>
+        <span className="milestone" ref={emptyMilestone}></span>
+        <span className="hidden" ref={iconElement}>
+          {milestone.icon}
         </span>
         <span className="milestone-meta">{milestone.meta}</span>
       </div>
@@ -51,9 +53,9 @@ const Milestone = ({ milestone }) => {
         }
 
         .milestone-text {
-          border-radius: ${milestone.direction === 'row'
-            ? '0 7px 7px 0'
-            : '7px 0 0 7px'};
+          border-radius: ${milestone.direction === "row"
+            ? "0 7px 7px 0"
+            : "7px 0 0 7px"};
           box-shadow: inset 0px 4px 10px -2px rgba(0, 0, 0, 0.3);
           padding: 1rem;
         }
@@ -64,11 +66,13 @@ const Milestone = ({ milestone }) => {
         }
 
         .show {
-          display: inline;
-          font-size: 2.5rem;
-          position: relative;
-          top: -21px;
-          left: -16px;
+          display: block;
+          height: 50px;
+          width: 50px;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 2rem;
+          overflow: hidden;
         }
 
         @media (max-width: 600px) {
