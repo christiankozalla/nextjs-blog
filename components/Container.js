@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
+import Link from "next/link";
+import { FiGithub, FiMail, FiTwitter } from "react-icons/fi";
 
 const Container = ({ children }) => {
   return (
@@ -138,7 +138,7 @@ const Container = ({ children }) => {
             >
               <FiTwitter />
             </a>
-            <a href="mailto:christian.kozalla@gmail.com">
+            <a href="mailto:devdiary.blog@gmail.com">
               <FiMail />
             </a>
           </div>
@@ -162,7 +162,7 @@ const Container = ({ children }) => {
           >
             <FiTwitter />
           </a>
-          <a href="mailto:christian.kozalla@gmail.com">
+          <a href="mailto:devdiary.blog@gmail.com">
             <FiMail />
           </a>
         </div>
