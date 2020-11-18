@@ -2,7 +2,7 @@
 'title': '9 VS Code Shortcuts for faster programming'
 'date': '2020-11-17'
 'author': 'Christian Kozalla'
-'shortTitle': 'VS Code is the most popular Code Editor for Web Development. These X useful shortcuts can help you code more efficiently!'
+'shortTitle': 'VS Code is the most popular Code Editor for Web Development. These 9 useful shortcuts can help you code more efficiently!'
 'description': 'Writing code is probably the most complex task in the world, it requires physical engagement, focus, a clear and undisturbed mind in order to fully immerse oneself in the process. Switching frequently between keyboard and mouse can be quite exhausting and kill your fluent process over and over again. Soo, I made a small list of VS Code shortcuts helping to keep up the positive flow while coding - hands on the keyboard!'
 'imageUrl': '/images/vs-code-shortcuts-for-faster-programming/vs-code-shortcuts-for-faster-programming.png'
 'tags': ['VS Code', 'Efficiency']

@@ -1,15 +1,15 @@
 ---
-"title": "8 Amazing GitHub Repos for Every Developer"
-"date": "2020-11-16"
-"author": "Christian Kozalla"
-"shortTitle": "GitHub is full of code.. But how to find excellent repos that come in handy for every web developer? I´ll show you the needles in the haystack!"
-"description": "tbd"
-"imageUrl": "/images/vue-tutorial-frontend-quiz-app-headsup.jpg"
-"tags": ["GitHub", "Resources"]
-"isInDb": false
+'title': '9 Amazing GitHub Repos for Every Developer'
+'date': '2020-11-19'
+'author': 'Christian Kozalla'
+'shortTitle': 'GitHub is full of code.. But how to find excellent repos that come in handy for every web developer? I´ll show you the needles in the haystack!'
+'description': 'tbd'
+'imageUrl': '/images/vue-tutorial-frontend-quiz-app-headsup.jpg'
+'tags': ['GitHub', 'Resources']
+'isInDb': true
 ---
 
-# 8 Amazing GitHub Repos for Every Developer
+# 9 Amazing GitHub Repos for Every Developer
 
 Since GitHub is **huge** and hard to grasp with the naked eye, I have collected 8 of the most amazing repos out there. These are handy resources for every Programmer seeking to enhance their skills in Web Development.
 
@@ -32,3 +32,5 @@ As a Developer you often find yourself confronted with the need to use a third-p
 ## 30 Seconds of Code
 
 ## The Developer Roadmap
+
+## GitHub Emoji Cheatsheet
