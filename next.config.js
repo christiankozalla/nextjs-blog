@@ -6,7 +6,7 @@ module.exports = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "frame anchestors 'none'"
+            value: "frame-ancestors 'none'"
           },
           {
             key: 'X-Frame-Options',
