@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FiGithub, FiMail, FiTwitter } from "react-icons/fi";
+import Link from 'next/link';
+import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 
 const Container = ({ children }) => {
   return (
@@ -128,6 +128,7 @@ const Container = ({ children }) => {
               href="https://github.com/christiankozalla"
               rel="noopener noreferrer"
               target="_blank"
+              aria-label="Link to Christians GitHub Profile"
             >
               <FiGithub />
             </a>
@@ -135,10 +136,14 @@ const Container = ({ children }) => {
               href="https://twitter.com/CKozalla"
               rel="noopener noreferrer"
               target="_blank"
+              aria-label="Link to Christians Twitter Account"
             >
               <FiTwitter />
             </a>
-            <a href="mailto:devdiary.blog@gmail.com">
+            <a
+              href="mailto:devdiary.blog@gmail.com"
+              aria-label="Christians E-Mail Address"
+            >
               <FiMail />
             </a>
           </div>
@@ -152,6 +157,7 @@ const Container = ({ children }) => {
             href="https://github.com/christiankozalla"
             rel="noopener noreferrer"
             target="_blank"
+            aria-label="Link to Christians GitHub Profile"
           >
             <FiGithub />
           </a>
@@ -159,10 +165,14 @@ const Container = ({ children }) => {
             href="https://twitter.com/CKozalla"
             rel="noopener noreferrer"
             target="_blank"
+            aria-label="Link to Christians Twitter Account"
           >
             <FiTwitter />
           </a>
-          <a href="mailto:devdiary.blog@gmail.com">
+          <a
+            href="mailto:devdiary.blog@gmail.com"
+            aria-label="Christians E-Mail Address"
+          >
             <FiMail />
           </a>
         </div>
