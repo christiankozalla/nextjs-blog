@@ -1,5 +1,5 @@
 module.exports = {
-  async Headers() {
+  async headers() {
     return [
       {
         source: '/',
