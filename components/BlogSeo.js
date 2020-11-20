@@ -2,7 +2,7 @@ import { NextSeo, ArticleJsonLd } from 'next-seo';
 
 export default function BlogSeo({ id, title, description, date, url }) {
   const datePublished = new Date(date).toISOString();
-  const imageUrl = `https://devdiary.me/images/${id}.jpg`;
+  const imageUrl = `https://devdiary.me/images/${id}.png`;
   return (
     <>
       <NextSeo
