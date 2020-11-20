@@ -11,7 +11,7 @@
 
 # 9 Amazing GitHub Repos for Every Developer
 
-Since GitHub is **huge** and hard to grasp with the naked eye, I have collected 8 of the most amazing repos out there. These are handy resources for every Programmer seeking to enhance their skills in Web Development.
+Since GitHub is **huge** and hard to grasp with the naked eye, I have collected 9 of the most amazing repos out there. These are handy resources for every Programmer seeking to enhance their skills in Web Development.
 
 ## :one: [Free For Dev](https://github.com/ripienaar/free-for-dev)
 
@@ -31,7 +31,7 @@ The Frontend Checklist is an _amazing_ resource you can consult everytime before
 
 When I read through the Frontend Checklist first, I even fixed some elements on my own blog [Devdiary](https://devdiary.me), and found useful tools like the [SERP Snipped Generator](https://app.sistrix.com/en/serp-snippet-generator), the [Real Favicon Generator](https://realfavicongenerator.net/) or [Wave Testing](https://wave.webaim.org/) for Accessibility.
 
-It's an invaluable list across HTML, CSS, JS and Best Practices :bowtie:
+It's an invaluable list across HTML, CSS, JS and Best Practices :heart_eyes:
 
 ## :three: [Build Your Own X](https://github.com/danistefanovic/build-your-own-x)
 
@@ -65,9 +65,11 @@ This is a professional template to give you a quick start with your next website
 - `npm install html5-boilerplate` OR `yarn add html5-boilerplate` - as a node module
 - the new [create-html5-boilerplate](https://github.com/h5bp/create-html5-boilerplate) solutions - run `npx create-html5-boilerplate new-site` :tada:
 
-## :six: [Free Programming Books]
+## :six: [Free Programming Books](https://github.com/EbookFoundation/free-programming-books)
 
-With over 160k GitHub stars this repos provides the most astonishing list of free programming :books: categorized by language!
+With over 160k GitHub stars this repos provides the most astonishing list of free programming books categorized by language! :books:
+
+Have fun browsing the list and even more fun reading! :book:
 
 ## :seven: [30 Seconds of Code](https://github.com/30-seconds/30-seconds-of-code)
 
@@ -77,7 +79,7 @@ With over 160k GitHub stars this repos provides the most astonishing list of fre
 
 _30 Seconds of Code_ is full of Short JavaScript code snippets for all your development needs! You can search for snippets on their corresponding website [30secondsofcode.org](https://www.30secondsofcode.org/)! Inside the snippet list you'll find many valuable posts not only JavaScript and React, but CSS and Phython, too. :sunny:
 
-## :eight: [The Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap
+## :eight: [The Developer Roadmap](https://github.com/kamranahmedse/developer-roadmap)
 
 <p align="center">
   <img src="/images/amazing-github-repos-for-every-web-developer/developer-roadmap.png" alt="Developer Roadmap GitHub Repo" width="95%" />
@@ -89,6 +91,10 @@ The Developer Roadmap's got you covered showing you every direction and destinat
 
 ## :nine: [GitHub Emoji Cheatsheet](https://github.com/catdad/github-emoji-cheatsheet)
 
+I used that one alot throughout this post! :smile: Several days ago, my [blog](https://devdiary.me) didn't support parsing emojis like `:smile:` from markdown.. :grimacing:
+
+But a nice remark plugin called [remark-emoji](https://www.npmjs.com/package/remark-emoji) made it happend! :tada::tada::tada:
+
 ## Conclusion
 
-Thanks for reading through! :tada: I hope you found something interesting here and there in this vast ocean of code called GitHub. If you have any feedback on this post, please let me know!
+Thanks for reading through! :heart: I hope you found something interesting here and there in this vast ocean of code called GitHub. If you have any feedback on this post, please let me know!
