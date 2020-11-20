@@ -689,7 +689,7 @@ The full featured **<a href="https://vue-quiz-app.christiankozalla.vercel.app" t
 
 #### If you are interested in implementing a custom Modal at the end of the Quiz showing the user his score and much more,
 
-#### direct message me on Twitter: [@ChristianKozal1](https://twitter.com/ChristianKozal1)
+#### direct message me on Twitter: [@ChristianKozal1](https://twitter.com/CKozalla)
 
 #### Or reach out to me via Mail: devdiary.blog@gmail.com
 

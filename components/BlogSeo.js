@@ -1,4 +1,4 @@
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { NextSeo, ArticleJsonLd } from 'next-seo';
 
 export default function BlogSeo({ id, title, description, date, url }) {
   const datePublished = new Date(date).toISOString();
@@ -10,7 +10,7 @@ export default function BlogSeo({ id, title, description, date, url }) {
         description={description}
         canonical={url}
         openGraph={{
-          type: "article",
+          type: 'article',
           article: { publishedTime: datePublished },
           url,
           title,
@@ -20,7 +20,7 @@ export default function BlogSeo({ id, title, description, date, url }) {
               url: imageUrl,
               width: 300,
               height: 200,
-              alt: "Featured Article Image"
+              alt: 'Featured Article Image'
             }
           ]
         }}
@@ -34,7 +34,7 @@ export default function BlogSeo({ id, title, description, date, url }) {
         publisherName="Christian Kozalla"
         title={title}
         url={url}
-        images={[`https://devdiary.me/images/${id}.jpg`]}
+        images={[`https://devdiary.me/images/${id}.png`]}
       />
     </>
   );
