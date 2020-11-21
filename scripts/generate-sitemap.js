@@ -1,12 +1,12 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-const postsDirectory = path.join(process.cwd().replace("scripts", ""), "posts");
+const postsDirectory = path.join(process.cwd().replace('scripts', ''), 'posts');
 
 (async () => {
   const fileNames = fs.readdirSync(postsDirectory);
   const cleanNames = fileNames.map((fileName) => {
-    const cleanName = fileName.replace(".md", "");
+    const cleanName = fileName.replace('.md', '');
     return cleanName;
   });
 
@@ -23,10 +23,6 @@ const postsDirectory = path.join(process.cwd().replace("scripts", ""), "posts");
     <url>
       <loc>https://devdiary.me/about</loc>
     </url>
-
-    <url>
-      <loc>https://devdiary.me/</loc>
-    </url>
     
     ${cleanNames
       .map((file) => {
@@ -36,12 +32,12 @@ const postsDirectory = path.join(process.cwd().replace("scripts", ""), "posts");
       </url>
         `;
       })
-      .join("")}
+      .join('')}
     </urlset>
   `;
 
   fs.writeFileSync(
-    process.cwd().replace("scripts", "public/sitemap.xml"),
+    process.cwd().replace('scripts', 'public/sitemap.xml'),
     sitemap
   );
 })();
