@@ -11,7 +11,7 @@ const description =
 const Posts = ({ allPostsData }) => {
   const introduction = 'Devdiary Developer Blog';
   const subintroduction =
-    "Here, I'm writing about my journey 🌈 <hr/> 🌟 Frontend Frameworks<br/> 🍭 Code Snippets<br/> 🌶️ Personal Experience";
+    "Here, I'm writing about my journey 🌈 <br/><br/> 🌟 Frontend Frameworks<br/> 🍭 Code Snippets<br/> 🌶️ Personal Experience";
 
   return (
     <>
