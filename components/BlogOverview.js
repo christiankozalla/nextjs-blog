@@ -5,7 +5,7 @@ const BlogOverview = ({ allPostsData }) => {
   return (
     <div className="blog-overview-wrapper">
       <h2>Latest Blog Posts</h2>
-      {allPostsData.map((post) => {
+      {allPostsData.slice(0, 5).map((post) => {
         const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");
 
         return (
