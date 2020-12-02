@@ -18,7 +18,7 @@ const Posts = ({ allPostsData }) => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${url}/blog`}
+        canonical={`${url}/posts`}
         openGraph={{ url, title, description }}
       />
       <BlogIntroduction
