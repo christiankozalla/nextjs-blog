@@ -29,7 +29,7 @@ const Singlecard = ({ post }) => {
 
       <div className="flex-row around">
         <p className="small-italic">
-          {formattedDate} - by {post.author}
+          {formattedDate} - {post.readingTime} min.
         </p>
         <img
           className="avatar"
@@ -83,7 +83,7 @@ const Singlecard = ({ post }) => {
         }
 
         .card-header span {
-          padding: 0.3rem 0.7rem;
+          padding: 0 0.7rem;
           margin: 0.3rem;
           border-radius: 3px;
           color: white;

@@ -1,10 +1,10 @@
-import { getSortedPostsData } from "../lib/posts";
-import Cards from "../components/Cards";
+import { getSortedPostsData } from '../lib/posts';
+import Cards from '../components/Cards';
 
-import { NextSeo } from "next-seo";
+import { NextSeo } from 'next-seo';
 
-const url = "https://devdiary.me";
-const title = "Devdiary Blog - Christian Kozalla";
+const url = 'https://devdiary.me';
+const title = 'Devdiary Web Development Blog';
 const description =
   "On DevDiary I'm going to share my experience with HTML, CSS and JavaScript as a Frontend Engineer. I've learnt React, Next.js and I'm jumping into Vue.js, right now!";
 const Posts = ({ allPostsData }) => {

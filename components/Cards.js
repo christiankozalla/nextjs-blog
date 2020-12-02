@@ -6,6 +6,7 @@ const Cards = ({ allPostsData }) => {
     title: 'Send me Feedback',
     date: '2020-06-01',
     author: 'Christian Kozalla',
+    readingTime: '0',
     description:
       "As a young Blogger and Junior Web Developer I'm happy and grateful for your Feedback! Send me a proposal for a new Topic in Web Development to cover in my next Blog post, or simply reach out to me via Twitter or Mail to share your impressions with me. Hope you enjoy DevDiary!",
     imageUrl: '/images/Coding-Screen-2.jpg',
