@@ -1,14 +1,12 @@
-const BlogIntroduction = () => {
+const BlogIntroduction = ({ introduction, subintroduction }) => {
   return (
     <>
       <div id="introduction">
-        <h1>Hi! I am Christian Kozalla 👋</h1>
-        <h2 id="sub-introduction">
-          My Blog <em>DevDiary</em> maps out my Journey to Web Development.
-          Here, I'm going to share my experience with HTML, CSS and JavaScript
-          as a Frontend Engineer. I've learnt React, Next.js and I'm jumping
-          into Vue.js, right now! 🚀
-        </h2>
+        <h1>{introduction}</h1>
+        <h2
+          id="sub-introduction"
+          dangerouslySetInnerHTML={{ __html: subintroduction }}
+        />
       </div>
       <style jsx>{`
         #introduction {
