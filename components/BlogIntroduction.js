@@ -1,4 +1,4 @@
-const BlogIntroduction = ({ introduction, subintroduction }) => {
+const BlogIntroduction = ({ introduction, subintroduction, textAlign }) => {
   return (
     <>
       <div id="introduction">
@@ -14,6 +14,8 @@ const BlogIntroduction = ({ introduction, subintroduction }) => {
           box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.3);
           padding: 0.5rem 1.5rem;
           margin-bottom: 1rem;
+          width: 100%;
+          text-align: ${textAlign};
         }
 
         h1 {

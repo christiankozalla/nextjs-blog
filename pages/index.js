@@ -12,6 +12,7 @@ export default function Home({ allPostsData }) {
       <BlogIntroduction
         introduction={introduction}
         subintroduction={subintroduction}
+        textAlign={'left'}
       />
       <BlogOverview allPostsData={allPostsData} />
     </>

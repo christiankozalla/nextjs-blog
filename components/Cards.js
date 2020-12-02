@@ -19,7 +19,6 @@ const Cards = ({ allPostsData }) => {
 
   return (
     <div>
-      <h1>Featured Posts</h1>
       <div className="flex-row">
         {allPostsData.map((post) => {
           return <Singlecard key={post.id} post={post} />;
