@@ -39,6 +39,13 @@ const Singlecard = ({ post }) => {
         />
       </div>
       <p id="description">{post.description}</p>
+      <p id="read-more">
+        <Link href={`/posts/${post.id}`}>
+          <a className="link" id="read-more-anchor">
+            Read more
+          </a>
+        </Link>
+      </p>
       <div className="flex-row between small-italic" id="footer">
         {post.isInDb ? (
           <Fetchclientside id={post.id} />
@@ -117,6 +124,16 @@ const Singlecard = ({ post }) => {
 
         h2 {
           padding-left: 0.7rem;
+        }
+
+        #read-more {
+          text-align: right;
+          font-style: italic;
+          margin: 0 0.5rem 0.5rem 0;
+        }
+
+        #read-more-anchor {
+          padding: 0.5rem 0.3rem;
         }
 
         .link {
