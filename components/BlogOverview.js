@@ -22,8 +22,8 @@ const BlogOverview = ({ allPostsData }) => {
                     src="/images/Avatar_CK_min.jpg"
                     alt="Christians Avatar"
                   />
-                  <span className="small-italic">by {post.author}</span>
                   <span className="small-italic">{formattedDate}</span>
+                  <span className="small-italic">{post.readingTime} min.</span>
                 </div>
               </div>
             </a>
