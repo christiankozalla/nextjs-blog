@@ -18,15 +18,16 @@ const Singlecard = ({ post }) => {
         </div>
       )}
       {post.isInDb ? (
-        <Link href={`/posts/${post.id}`}>
-          <a>
-            <h2>{post.title}</h2>
-          </a>
-        </Link>
+        <h2>
+          <Link href={`/posts/${post.id}`}>
+            <a className="link">{post.title}</a>
+          </Link>
+        </h2>
       ) : (
-        <h2>{post.title}</h2>
+        <h2>
+          <span className="link">{post.title}</span>
+        </h2>
       )}
-
       <div className="flex-row around">
         <p className="small-italic">
           {formattedDate} - {post.readingTime} min.
@@ -102,11 +103,6 @@ const Singlecard = ({ post }) => {
           border-radius: 20px;
         }
 
-        h2 {
-          margin: 0.2rem 0 0 0.4rem;
-          padding: 0 0.3rem;
-        }
-
         .flex-row {
           align-items: center;
         }
@@ -117,6 +113,27 @@ const Singlecard = ({ post }) => {
 
         .between {
           justify-content: space-between;
+        }
+
+        h2 {
+          padding-left: 0.7rem;
+        }
+
+        .link {
+          padding: 0 3px 3px 3px;
+          background-image: linear-gradient(
+            transparent calc(100% - 15px),
+            rgba(36, 153, 209, 0.5)
+          );
+          background-size: 0 100%;
+          transition: background-size 0.35s cubic-bezier(0.42, 0, 0.58, 1) 0.1s;
+          background-repeat: no-repeat;
+          border-radius: 5px;
+        }
+
+        .link:hover,
+        .link:focus {
+          background-size: 100% 100%;
         }
 
         #footer {
