@@ -13,11 +13,11 @@ export default function Post({ postData }) {
 
   // url for BlogSeo
   const postUrl = `https://devdiary.me/posts/${postData.id}`;
-  /* 
+
   useEffect(() => {
     updatePostAttribute(postData.id, 'postViews');
   });
- */
+
   return (
     <>
       <Head>
