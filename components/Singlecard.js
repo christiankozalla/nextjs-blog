@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { parseISO, format } from 'date-fns';
-import { FiHeart, FiEye } from 'react-icons/fi';
+import { FiHeart, FiEye, FiTwitter } from 'react-icons/fi';
 import Fetchclientside from '../components/Fetchclientside';
 
 const Singlecard = ({ post }) => {
@@ -40,11 +40,28 @@ const Singlecard = ({ post }) => {
       </div>
       <p id="description">{post.description}</p>
       <p id="read-more">
-        <Link href={`/posts/${post.id}`}>
-          <a className="link" id="read-more-anchor">
-            Read more
+        {!post.isDummy ? (
+          <Link href={`/posts/${post.id}`}>
+            <a className="link" id="read-more-anchor">
+              Read more
+            </a>
+          </Link>
+        ) : (
+          <a
+            className="link"
+            rel="noopener"
+            target="_blank"
+            href="https://twitter.com/CKozalla"
+            style={{
+              paddingRight: 8
+            }}
+          >
+            DevDiary on{' '}
+            <span style={{ verticalAlign: 'middle' }}>
+              <FiTwitter />
+            </span>
           </a>
-        </Link>
+        )}
       </p>
       <div className="flex-row between small-italic" id="footer">
         {post.isInDb ? (

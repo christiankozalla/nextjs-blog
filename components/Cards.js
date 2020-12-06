@@ -3,15 +3,16 @@ import Singlecard from './Singlecard';
 const Cards = ({ allPostsData }) => {
   const dummyCard = {
     id: 'give-me-feedback',
-    title: 'Send me Feedback',
+    title: 'Connect with me',
     date: '2020-06-01',
     author: 'Christian Kozalla',
     readingTime: '0',
     description:
-      "As a young Blogger and Junior Web Developer I'm happy and grateful for your Feedback! Send me a proposal for a new Topic in Web Development to cover in my next Blog post, or simply reach out to me via Twitter or Mail to share your impressions with me. Hope you enjoy DevDiary!",
+      "As a young Blogger and Junior Web Developer I'm happy and grateful for your Feedback! If you like to connect with me longterm, follow me on Twitter! I'll tweet out every new post, there. Hope you enjoy DevDiary!",
     imageUrl: '/images/Coding-Screen-2.jpg',
     tags: ['Propose', 'new', 'Topics'],
-    isInDb: false
+    isInDb: false,
+    isDummy: true
   };
 
   // to fill empty space if there is an odd number of cards displayed - so there are always two Singlecards per row on a wide screen
