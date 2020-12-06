@@ -30,7 +30,7 @@ const Singlecard = ({ post }) => {
       )}
       <div className="flex-row around">
         <p className="small-italic">
-          {formattedDate} - {post.readingTime} min.
+          {formattedDate} • {post.readingTime} min.
         </p>
         <img
           className="avatar"
