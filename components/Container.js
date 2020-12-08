@@ -120,9 +120,6 @@ const Container = ({ children }) => {
           <Link href="/posts">
             <a>Blog</a>
           </Link>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
           <div className="nav-right">
             <a
               href="https://github.com/christiankozalla"

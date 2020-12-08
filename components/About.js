@@ -1,4 +1,3 @@
-import Welcome from '../components/Welcome';
 import Milestone from '../components/Milestone';
 
 const About = () => {
@@ -34,39 +33,23 @@ const About = () => {
   ];
 
   return (
-    <>
-      <div id="avatar"></div>
-      <Welcome
-        text={['I am Christian', 'Developer of DevDiary', 'Christian Kozalla']}
-        rounds={1}
-        center={true}
-      />
+    <div id="about-wrapper">
+      <h2>About Me</h2>
       {milestones.map((milestone) => (
         <Milestone milestone={milestone} key={milestone.meta} />
       ))}
       <style jsx>{`
-        #avatar {
-          background-image: url('/images/Avatar_CK_mid.jpg');
-          background-position: center;
-          background-size: cover;
-          height: 160px;
-          width: 160px;
-          border-radius: 80px;
-          border: 3px solid white;
-          margin-bottom: -2rem;
-          z-index: 2;
+        h2 {
+          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+          font-weight: 600;
+          padding-left: 1rem;
         }
 
-        @media (max-width: 500px) {
-          #avatar {
-            height: 100px;
-            width: 100px;
-            border-radius: 50px;
-            margin-bottom: -1rem;
-          }
+        #about-wrapper {
+          width: 100%;
         }
       `}</style>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import { getSortedPostsData } from '../lib/posts';
 import BlogOverview from '../components/BlogOverview';
 import BlogIntroduction from '../components/BlogIntroduction';
+import About from '../components/About';
 
 export default function Home({ allPostsData }) {
   const introduction = 'Hi! I am Christian Kozalla 👋';
@@ -15,6 +16,7 @@ export default function Home({ allPostsData }) {
         textAlign={'left'}
       />
       <BlogOverview allPostsData={allPostsData} />
+      <About />
     </>
   );
 }

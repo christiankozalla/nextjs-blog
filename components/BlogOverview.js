@@ -34,8 +34,7 @@ const BlogOverview = ({ allPostsData }) => {
         h2 {
           text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
           font-weight: 600;
-          padding-left: 0.5rem;
-          opacity: 0.8;
+          padding-left: 1rem;
         }
 
         .blog-overview-wrapper {
