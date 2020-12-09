@@ -25,7 +25,7 @@ Remember how everything is a box on the web? Here is a quick refresher!
   <figcaption style="padding-top: 0; padding-left: 2rem; font-style: italic">Fig 1: Part of a website I recently built - Notice blue arrows down</figcaption>
 </p>
 
-The image above shows part of a website I recently built, where different shapes are included. Using the brower's developer tools you can easily display the boxes around each rendered element.
+The image above shows part of a website I recently built, where different shapes are included. Using the browser's developer tools you can easily display the boxes around each rendered element.
 
 <p align="center">
   <img src="/images/css-display-property-explained/box-example-our-stories.png" alt="Box around web HTML element" width="100%" />
@@ -35,15 +35,15 @@ The image above shows part of a website I recently built, where different shapes
 Especially the blue arrows pointing down are interesting. You may be surprised to see that - despite their triangular shape - these arrows are still rendered **as a rectangular box** in the browser!
 
 <p align="center">
-  <img src="/images/css-display-property-explained/box-example-arrow-down.png" alt="Box around arrow poiting down" width="100%" />
-  <figcaption style="padding-top: 0; padding-left: 2rem; font-style: italic">Fig 3: This is the box around the arrow poiting down</figcaption>
+  <img src="/images/css-display-property-explained/box-example-arrow-down.png" alt="Box around arrow pointing down" width="100%" />
+  <figcaption style="padding-top: 0; padding-left: 2rem; font-style: italic">Fig 3: This is the box around the arrow pointing down</figcaption>
 </p>
 
 As you can see the box has two solid borders and is rotated by 45 degrees in order to let the arrow point down. But it is **still a box!**
 
 ## CSS Flow Layout
 
-In order to define the page's layout each box is put into the _normal flow_ depending on their `display` values. The most basic values for the CSS `display` propety are
+In order to define the page's layout each box is put into the _normal flow_ depending on their `display` values. The most basic values for the CSS `display` property are
 
 - `display: block`
 - `display: inline`
@@ -55,7 +55,7 @@ Here, we want to focus on `display: block` and `display: inline` to give you som
 
 ### Many HTML elements are _inline_ or _block_ by default
 
-Everytime we use a `<div>` element, we actually use a block-level element. Ooooops, I am glad you already knew that! :smile:
+Every time we use a `<div>` element, we actually use a block-level element. Ooooops, I am glad you already knew that! :smile:
 
 Here's a list of most frequently used HTML elements and their default `display` property values.
 
@@ -96,7 +96,7 @@ Basic differences of block and inline elements influence how they integrate into
 
 ## CSS display working example
 
-Imagine you have some parapgraph with text including several anchors in order to link the user to other pages. You want to fire a CSS animation on hover, to let the user know that's a clickable link.
+Imagine you have some paragraph with text including several anchors in order to link the user to other pages. You want to fire a CSS animation on hover, to let the user know that's a clickable link.
 
 [This Article by Danny Guo](https://www.dannyguo.com/blog/animated-multiline-link-underlines-with-css/) covers the topic of underlining multiline text with CSS quite nicely and very in-depth!
 
@@ -128,9 +128,9 @@ So, in order to make an underline animation with CSS, we can basically set a `ba
 
 On hover the elements `background-size` increases its width to 100% using the specified _cubic-bezier_ timing function. More on predefined timing functions can be found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)
 
-> It's best practice to apply similar or the same visual effect on focused elements for users how navigate your site through the keyboard or with screen readers. So make sure to include `:focus` next to the `:hover` pseudo-element selector!
+> It's best practice to apply similar or the same visual effect on focused elements for users how navigate your site through the keyboard or with screen readers. So make sure to include `:focus` next to the `:hover` pseudo-class selector!
 
-## What may happen if you are not aware of display `block` and `inline` bahavior?
+## What may happen if you are not aware of display `block` and `inline` behavior?
 
 <p align="center">
   <img src="/images/css-display-property-explained/display_block.gif" alt="Multiline underline on hover animation" width="100%" />
@@ -138,6 +138,8 @@ On hover the elements `background-size` increases its width to 100% using the sp
 </p>
 
 When applying the CSS above to a `block` element, i. e. `#with-underline` being a `<div>` or `<p>`, the _multiline_ underline animation fails :rage:
+
+The background-image is at the bottom of the whole _block_, and not multiline like intended.
 
 Simply adding `display: inline` to the respective element (or changing it to an `inline` HTML element by default like `<span>` or `<a>`) gives us the wanted solution of a multiline underline animation on hover! :tada:
 
@@ -148,7 +150,7 @@ Simply adding `display: inline` to the respective element (or changing it to an 
 
 ## Conclusion
 
-CSS is a powerful language being constantly improved by [W3C](https://www.w3.org/) and is one of the foundational languages for the web next to HTML and JavaScript. Knowing the basics about the CSS `display` property, HTML elements and their default `display` values and how it affect the integration of said HTML elements into the CSS _Flow Layout_ helps with positioning elements on a website. I can be a huge time saver when it comes to debugging!
+CSS is a powerful language being constantly improved by [W3C](https://www.w3.org/) and is one of the foundational languages for the web next to HTML and JavaScript. Knowing the basics about the CSS `display` property, HTML elements and their default `display` values and how it affect the integration of said HTML elements into the CSS _Flow Layout_ helps with positioning elements on a website. It can be a huge time saver when it comes to debugging!
 
 This introduction to CSS `display` and its most frequently used values `block` and `inline` may broaden your background knowledge of CSS and help setting up layouts with HTML and CSS! :fire:
 
