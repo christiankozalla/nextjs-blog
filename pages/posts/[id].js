@@ -26,7 +26,7 @@ export default function Post({ postData }) {
       {/* BlogSeo adds <NextSeo (openGraph) /> and <ArticleJsonLd /> to Blog Post */}
       <BlogSeo
         title={postData.title}
-        description={postData.description}
+        description={postData.shortTitle}
         date={postData.date}
         url={postUrl}
         id={postData.id}
