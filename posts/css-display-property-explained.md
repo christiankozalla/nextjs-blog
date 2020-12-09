@@ -59,18 +59,22 @@ Everytime we use a `<div>` element, we actually use a block-level element. Ooooo
 
 Here's a list of most frequently used HTML elements and their default `display` property values.
 
-| `display: block` | `display: inline` |
-| ---------------- | ----------------- |
-| `<div>`          | `<a>`             |
-| `<p>`            | `<span>`          |
-| `<ul>`           | `<img>`           |
-| `<ol>`           | `<button>`        |
-| `<li>`           | `<input>`         |
-| `<nav>`          | `<textarea>`      |
-| `<header>`       | `<select>`        |
-| `<footer>`       | `<i>`             |
-| `<pre>`          | `<code>`          |
-| `<hr>`           | `<br>`            |
+<center>
+
+|  `block`   |   `inline`   |
+| :--------: | :----------: |
+|  `<div>`   |    `<a>`     |
+|   `<p>`    |   `<span>`   |
+|   `<ul>`   |   `<img>`    |
+|   `<ol>`   |  `<button>`  |
+|   `<li>`   |  `<input>`   |
+|  `<nav>`   | `<textarea>` |
+| `<header>` |  `<select>`  |
+| `<footer>` |    `<i>`     |
+|  `<pre>`   |   `<code>`   |
+|   `<hr>`   |    `<br>`    |
+
+</center>
 
 ## Block vs Inline elements
 
