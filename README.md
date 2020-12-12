@@ -1,15 +1,15 @@
 <div align="center">
-  <img src="https://github.com/christiankozalla/nextjs-blog/blob/master/public/favicons/android-chrome-192x192.png" alt="DevDiary Icon" />
+  <img src="https://github.com/christiankozalla/nextjs-blog/blob/master/public/favicons/android-chrome-192x192.png" alt="chrisko.io Icon" />
   <h1>
-    DevDiary
+    chrisko.io
   </h1>
   <h2>
     Personal Developer Blog by Christian Kozalla
   </h2>
-  <h3>This is the Codebase of my personal Developer Blog - DevDiary</h3>
+  <h3>This is the Codebase of my personal Developer Blog - chrisko.io</h3>
 </div>
 
-## DevDiary is powered by
+## chrisko.io is powered by
 
 - [Next.js](https://nextjs.org) - a lightweight React Framework for Production
 - Markdown Integration with [Remark](https://www.npmjs.com/package/remark)
@@ -21,7 +21,7 @@
 - `pages/posts/[id]` - Dynamic routes are generated for each blog post Markdown file
 - `pages/*` - Other static pages like _Home_, _Blog_ and _About_
 
-## Running DevDiary locally
+## Running chrisko.io locally
 
 <code style="line-height: 2.5em;">
   <pre>

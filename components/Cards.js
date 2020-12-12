@@ -8,7 +8,7 @@ const Cards = ({ allPostsData }) => {
     author: 'Christian Kozalla',
     readingTime: '0',
     description:
-      "As a young Blogger and Junior Web Developer I'm happy and grateful for your Feedback! If you like to connect with me longterm, follow me on Twitter! I'll tweet out every new post, there. Hope you enjoy DevDiary!",
+      "As a young Blogger and Junior Web Developer I'm happy and grateful for your Feedback! If you like to connect with me longterm, follow me on Twitter! I'll tweet out every new post, there. Hope you enjoy my blog!",
     imageUrl: '/images/Coding-Screen-2.jpg',
     tags: ['Propose', 'new', 'Topics'],
     isInDb: false,

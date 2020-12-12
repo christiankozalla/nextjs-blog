@@ -13,22 +13,22 @@ const postsDirectory = path.join(process.cwd().replace('scripts', ''), 'posts');
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-      <loc>https://devdiary.me</loc>
+      <loc>https://chrisko.io</loc>
     </url>
 
     <url>
-      <loc>https://devdiary.me/posts</loc>
+      <loc>https://chrisko.io/posts</loc>
     </url>
 
     <url>
-      <loc>https://devdiary.me/about</loc>
+      <loc>https://chrisko.io/about</loc>
     </url>
     
     ${cleanNames
       .map((file) => {
         return `
       <url>
-        <loc>https://devdiary.me/posts/${file}</loc>
+        <loc>https://chrisko.io/posts/${file}</loc>
       </url>
         `;
       })

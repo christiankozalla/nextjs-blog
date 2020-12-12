@@ -29,7 +29,7 @@ As a Developer you often find yourself confronted with the need to use a third-p
 
 The Frontend Checklist is an _amazing_ resource you can consult everytime before launching a website getting a project ready for production! Simply browse the list to check whether all required elements are implemented into your website. Some elements are recommended, some _can't be omitted_, which is highlighted with corresponding colors next to the tool/element.
 
-When I read through the Frontend Checklist first, I even fixed some elements on my own blog [Devdiary](https://devdiary.me), and found useful tools like the [SERP Snipped Generator](https://app.sistrix.com/en/serp-snippet-generator), the [Real Favicon Generator](https://realfavicongenerator.net/) or [Wave Testing](https://wave.webaim.org/) for Accessibility.
+When I read through the Frontend Checklist first, I even fixed some elements on my own blog [chrisko.io](https://chrisko.io), and found useful tools like the [SERP Snipped Generator](https://app.sistrix.com/en/serp-snippet-generator), the [Real Favicon Generator](https://realfavicongenerator.net/) or [Wave Testing](https://wave.webaim.org/) for Accessibility.
 
 It's an invaluable list across HTML, CSS, JS and Best Practices :heart_eyes:
 
@@ -91,7 +91,7 @@ The Developer Roadmap's got you covered showing you every direction and destinat
 
 ## :nine: [GitHub Emoji Cheatsheet](https://github.com/catdad/github-emoji-cheatsheet)
 
-I used that one alot throughout this post! :smile: Several days ago, my [blog](https://devdiary.me) didn't support parsing emojis like `:smile:` from markdown.. :grimacing:
+I used that one alot throughout this post! :smile: Several days ago, my [blog](https://chrisko.io) didn't support parsing emojis like `:smile:` from markdown.. :grimacing:
 
 But a nice remark plugin called [remark-emoji](https://www.npmjs.com/package/remark-emoji) made it happend! :tada::tada::tada:
 

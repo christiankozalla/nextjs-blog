@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-      <loc>https://devdiary.me</loc>
+      <loc>https://chrisko.io</loc>
     </url>
 
     <url>
-      <loc>https://devdiary.me/posts</loc>
+      <loc>https://chrisko.io/posts</loc>
     </url>
 
     <url>
-      <loc>https://devdiary.me/about</loc>
+      <loc>https://chrisko.io/about</loc>
     </url>
     
     
       <url>
-        <loc>https://devdiary.me/posts/amazing-github-repos-for-every-web-developer</loc>
+        <loc>https://chrisko.io/posts/amazing-github-repos-for-every-web-developer</loc>
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/aws-dynamodb-next-js-deploy-vercel</loc>
+        <loc>https://chrisko.io/posts/aws-dynamodb-next-js-deploy-vercel</loc>
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/css-display-property-explained</loc>
+        <loc>https://chrisko.io/posts/css-display-property-explained</loc>
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/first-next-js-blog-devdiary</loc>
+        <loc>https://chrisko.io/posts/first-next-js-blog-devdiary</loc>
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/how-to-make-component-reusable-with-props</loc>
+        <loc>https://chrisko.io/posts/how-to-make-component-reusable-with-props</loc>
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/picking-a-frontend-framework-as-beginner</loc>
+        <loc>https://chrisko.io/posts/picking-a-frontend-framework-as-beginner</loc>
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/vs-code-shortcuts-for-faster-programming</loc>
+        <loc>https://chrisko.io/posts/vs-code-shortcuts-for-faster-programming</loc>
       </url>
         
       <url>
-        <loc>https://devdiary.me/posts/vue-tutorial-frontend-quiz-app-headsup</loc>
+        <loc>https://chrisko.io/posts/vue-tutorial-frontend-quiz-app-headsup</loc>
       </url>
         
     </urlset>

@@ -56,7 +56,7 @@ const Singlecard = ({ post }) => {
               paddingRight: 8
             }}
           >
-            DevDiary on{' '}
+            chrisko on{' '}
             <span style={{ verticalAlign: 'middle' }}>
               <FiTwitter />
             </span>

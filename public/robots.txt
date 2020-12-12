@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://devdiary.me/sitemap.xml
+Sitemap: https://chrisko.io/sitemap.xml

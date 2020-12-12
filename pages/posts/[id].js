@@ -12,7 +12,7 @@ export default function Post({ postData }) {
   const formattedDate = format(parseISO(postData.date), "do 'of' MMM ''yy");
 
   // url for BlogSeo
-  const postUrl = `https://devdiary.me/posts/${postData.id}`;
+  const postUrl = `https://chrisko.io/posts/${postData.id}`;
 
   useEffect(() => {
     updatePostAttribute(postData.id, 'postViews');
