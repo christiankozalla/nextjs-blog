@@ -19,10 +19,6 @@ const postsDirectory = path.join(process.cwd().replace('scripts', ''), 'posts');
     <url>
       <loc>https://chrisko.io/posts</loc>
     </url>
-
-    <url>
-      <loc>https://chrisko.io/about</loc>
-    </url>
     
     ${cleanNames
       .map((file) => {
