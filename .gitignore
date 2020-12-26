@@ -38,3 +38,6 @@ db-config.json
 
 # VS Code
 .vscode
+
+# Writing Posts
+/posts_in_process
