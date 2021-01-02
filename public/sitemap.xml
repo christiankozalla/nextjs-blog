@@ -22,6 +22,10 @@
     </url>
         
     <url>
+      <loc>https://chrisko.io/posts/emit-events-in-vue-to-pass-data-between-components</loc>
+    </url>
+        
+    <url>
       <loc>https://chrisko.io/posts/first-next-js-blog-devdiary</loc>
     </url>
         
@@ -35,6 +39,10 @@
         
     <url>
       <loc>https://chrisko.io/posts/vs-code-shortcuts-for-faster-programming</loc>
+    </url>
+        
+    <url>
+      <loc>https://chrisko.io/posts/vue-tutorial-build-a-frontend-quiz-app-with-custom-events</loc>
     </url>
         
     <url>

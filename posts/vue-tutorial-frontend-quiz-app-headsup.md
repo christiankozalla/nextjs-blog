@@ -689,8 +689,12 @@ The full featured **<a href="https://vue-quiz-app.christiankozalla.vercel.app" t
 
 #### If you are interested in implementing a custom Modal at the end of the Quiz showing the user his score and much more,
 
-#### direct message me on Twitter: [@ChristianKozal1](https://twitter.com/CKozalla)
+#### direct message me on Twitter: [@CKozalla](https://twitter.com/CKozalla)
 
 #### Or reach out to me via Mail: devdiary.blog@gmail.com
 
 Happy coding!
+
+## More Resources
+
+- [Vue Tutorial Part II: Build a Frontend Quiz App](https://chrisko.io/posts/vue-tutorial-build-a-frontend-quiz-app-with-custom-events)
