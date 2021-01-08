@@ -1,6 +1,6 @@
 const title = 'Christian Kozalla - Web Developer';
 const description =
-  'Self-taught Web Developer, crazy about JavaScript & Frontend Frameworks like React.js, Vue.js, Next.js - blogging about his Journey to Web Development!';
+  'Self-taught Web Developer, crazy about JavaScript & Frontend Frameworks like React.js, Vue.js, Next.js';
 
 const SEO = {
   title,
@@ -14,7 +14,7 @@ const SEO = {
     description,
     images: [
       {
-        url: 'https://chrisko.io/images/chrisko-exo-square.jpg',
+        url: 'https://chrisko.io/images/chrisko-exo-square.png',
         height: 200,
         width: 200,
         alt: title
