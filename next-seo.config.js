@@ -14,9 +14,9 @@ const SEO = {
     description,
     images: [
       {
-        url: 'https://chrisko.io/images/Avatar_CK_mid.jpg',
-        height: 300,
-        width: 300,
+        url: 'https://chrisko.io/images/chrisko-exo-square.jpg',
+        height: 200,
+        width: 200,
         alt: title
       }
     ]
@@ -24,7 +24,7 @@ const SEO = {
   twitter: {
     handle: '@CKozalla',
     site: '@CKozalla',
-    cardType: 'summary_large_image'
+    cardType: 'summary'
   }
 };
 
