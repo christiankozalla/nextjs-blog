@@ -1,35 +1,50 @@
-import Link from 'next/link';
+import React, { useState } from 'react';
 import { parseISO, format } from 'date-fns';
 
+import BlogOverviewItem from './BlogOverviewItem';
+
 const BlogOverview = ({ allPostsData }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
     <div className="blog-overview-wrapper">
       <h2>Latest Blog Posts</h2>
-      {allPostsData.slice(0, 5).map((post) => {
-        const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");
-
-        return (
-          <Link className="link" href={`/posts/${post.id}`} key={post.id}>
-            <a>
-              <div className="post-wrapper">
-                <div>
-                  <h3 className="title">{post.title}</h3>
-                  <p className="post-shortTitle">{post.shortTitle}</p>
-                </div>
-                <div className="post-author">
-                  <img
-                    className="avatar"
-                    src="/images/Avatar_CK_min.jpg"
-                    alt="Christians Avatar"
-                  />
-                  <span className="small-italic">{formattedDate}</span>
-                  <span className="small-italic">{post.readingTime} min.</span>
-                </div>
-              </div>
-            </a>
-          </Link>
-        );
-      })}
+      <input
+        id="search-input"
+        aria-label="Search blog posts"
+        type="search"
+        placeholder="Search the blog"
+        onChange={(e) => setSearchTerm(e.target.value.trim())}
+      />
+      <div>
+        {!searchTerm
+          ? allPostsData.slice(0, 5).map((post) => {
+              const formattedDate = format(
+                parseISO(post.date),
+                "do 'of' MMM ''yy"
+              );
+              post.formattedDate = formattedDate;
+              return <BlogOverviewItem post={post} key={post.id} />;
+            })
+          : allPostsData
+              .filter((post) => {
+                let searchTermLower = searchTerm.toLowerCase();
+                return (
+                  post.title.toLowerCase().includes(searchTermLower) ||
+                  post.shortTitle.toLowerCase().includes(searchTermLower)
+                );
+              })
+              .map((filteredPost) => {
+                const formattedDate = format(
+                  parseISO(filteredPost.date),
+                  "do 'of' MMM ''yy"
+                );
+                filteredPost.formattedDate = formattedDate;
+                return (
+                  <BlogOverviewItem post={filteredPost} key={filteredPost.id} />
+                );
+              })}
+      </div>
       <style jsx>{`
         h2 {
           text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
@@ -41,40 +56,16 @@ const BlogOverview = ({ allPostsData }) => {
           width: 100%;
         }
 
-        .post-wrapper {
-          display: flex;
-          border-radius: 7px;
-          box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.3);
-          padding: 0rem 1rem;
-          margin-bottom: 1rem;
-        }
-
-        .post-author {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          margin-left: 1rem;
-        }
-
-        .small-italic {
-          font-size: 80%;
-          font-style: italic;
-          opacity: 0.7;
-          white-space: nowrap;
-        }
-
-        .avatar {
-          display: inline-block;
-          height: 60px;
-          width: 60px;
-          border-radius: 30px;
-        }
-
-        @media (max-width: 600px) {
-          .post-author {
-            display: none;
-          }
+        #search-input {
+          display: block;
+          margin: 1rem auto;
+          padding: 0.7rem 0.5rem;
+          width: 90%;
+          outline: none;
+          border: 1px solid lightgray;
+          border-radius: 10px 0px 10px 0;
+          box-shadow: 3px 4px 10px lightgray;
+          font-size: 0.85rem;
         }
       `}</style>
     </div>
