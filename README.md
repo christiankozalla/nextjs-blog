@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/christiankozalla/nextjs-blog/blob/master/public/favicons/android-chrome-192x192.png" alt="chrisko.io Icon" />
+  <img src="https://github.com/christiankozalla/nextjs-blog/blob/master/public/android-chrome-192x192.png" alt="chrisko.io Icon" />
   <h1>
     chrisko.io
   </h1>
