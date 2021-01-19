@@ -44,7 +44,7 @@ $ npm run dev
 
 ### Basic Design for the Main Page
 
-`npx create-next-app` already created index.js in _/pages/index.js_. In Next.js, every page that should be accessible via an individual URL, e.g. _https://devdiary.io/blog/first-next-js-blog-devdiary_, is built from a JavaScript file in the _/pages_ directory. There you can use any React component you built. Mine live in the _/components_ directory.
+`npx create-next-app` already created index.js in _/pages/index.js_. In Next.js, every page that should be accessible via an individual URL, e.g. _chrisko.io/blog/first-next-js-blog-devdiary_, is built from a JavaScript file in the _/pages_ directory. There you can use any React component you built. Mine live in the _/components_ directory.
 
 In addition to the page files, Next.js supports an \__app.js_ file to include components that should be rendered on every page. Think of a Navbar or a Footer that should be displayed throughout the whole App and always look the same. So you don't have to import that components to each page .. (imagine you make 10 - 15 individual pages). Just place it inside \__app.js_ inside the _/pages_ directory. Voila!
 
@@ -67,7 +67,6 @@ Now, let's figure out how to build out the `<Container />`.
 $ mkdir components
 $ cd components
 $ touch Container.js
->>> Happy hacking =)
 ```
 
 ```js
