@@ -12,6 +12,13 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link
+            rel="preload"
+            href="/fonts/RubikGX.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
           <meta charSet="UTF-8" />
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <link

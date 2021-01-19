@@ -1,14 +1,23 @@
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/RubikGX.woff2) format('woff2');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik';
+  font-weight: 500;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 20px;
   color: black;
   background-color: #fafafa;
   width: 100%;
-  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -55,7 +64,7 @@ blockquote {
   /* Container div for markdown post content */
   .post {
     font-size: 16px;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .flex-row {
