@@ -149,7 +149,7 @@ const Container = ({ children }) => {
       <div className="content">{children}</div>
       <div className="footer">
         <div className="footer-content">
-          2020 Christian Kozalla
+          {new Date().getUTCFullYear()} Christian Kozalla
           <a
             href="https://github.com/christiankozalla"
             rel="noopener noreferrer"
