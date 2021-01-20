@@ -3,12 +3,17 @@ module.exports = {
   async headers() {
     return [
       {
-        source: '/',
+        source: '/fonts/RubikGX.woff2',
         headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable'
-          },
+          }
+        ]
+      },
+      {
+        source: '/',
+        headers: [
           {
             key: 'Content-Security-Policy',
             value: "frame-ancestors 'none'"
