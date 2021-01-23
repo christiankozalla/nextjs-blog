@@ -1,8 +1,15 @@
 import { NextSeo, ArticleJsonLd } from 'next-seo';
 
-export default function BlogSeo({ id, title, description, date, url }) {
+export default function BlogSeo({
+  id,
+  title,
+  description,
+  date,
+  url,
+  imageUrl
+}) {
   const datePublished = new Date(date).toISOString();
-  const imageUrl = `https://chrisko.io/images/${id}.png`;
+  const absoluteImageUrl = `https://chrisko.io${imageUrl}`;
   return (
     <>
       <NextSeo
@@ -17,7 +24,7 @@ export default function BlogSeo({ id, title, description, date, url }) {
           description: description,
           images: [
             {
-              url: imageUrl,
+              url: absoluteImageUrl,
               width: 200,
               height: 200,
               alt: 'Featured Article Image'

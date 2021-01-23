@@ -30,6 +30,11 @@ export default function Post({ postData }) {
         date={postData.date}
         url={postUrl}
         id={postData.id}
+        imageUrl={
+          postData.imageUrl
+            ? postData.imageUrl
+            : '/images/chrisko-exo-large.png'
+        }
       />
       <div id="post-header">
         <Image
