@@ -20,7 +20,6 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <meta charSet="UTF-8" />
-          <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"

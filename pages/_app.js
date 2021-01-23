@@ -10,17 +10,12 @@ import '../styles/global.css';
 
 const App = ({ Component, pageProps }) => {
   return (
-    <>
-      <Head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-      </Head>
-      <SWRConfig value={{ fetcher: fetch }}>
-        <Container>
-          {/* <DefaultSeo {...SEO} /> */}
-          <Component {...pageProps} />
-        </Container>
-      </SWRConfig>
-    </>
+    <SWRConfig value={{ fetcher: fetch }}>
+      <Container>
+        {/* <DefaultSeo {...SEO} /> */}
+        <Component {...pageProps} />
+      </Container>
+    </SWRConfig>
   );
 };
 
