@@ -18,11 +18,16 @@ export default function BlogSeo({ id, title, description, date, url }) {
           images: [
             {
               url: imageUrl,
-              width: 300,
+              width: 200,
               height: 200,
               alt: 'Featured Article Image'
             }
           ]
+        }}
+        twitter={{
+          cardType: 'summary',
+          site: '@CKozalla',
+          handle: '@CKozalla'
         }}
       />
       <ArticleJsonLd
@@ -30,7 +35,7 @@ export default function BlogSeo({ id, title, description, date, url }) {
         dateModified={datePublished}
         datePublished={datePublished}
         description={description}
-        publisherLogo="/images/Avatar_CK_min.jpg"
+        publisherLogo="/images/chrisko-exo-square.png"
         publisherName="Christian Kozalla"
         title={title}
         url={url}

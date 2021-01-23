@@ -41,6 +41,7 @@ const Container = ({ children }) => {
           }
 
           .navigation a {
+            padding: 0 0.7rem;
             color: #333;
             text-decoration: none;
             text-align: center;

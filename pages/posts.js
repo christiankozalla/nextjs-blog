@@ -4,10 +4,37 @@ import Cards from '../components/Cards';
 import { NextSeo } from 'next-seo';
 import BlogIntroduction from '../components/BlogIntroduction';
 
-const url = 'https://chrisko.io';
-const title = "ChrisKo's Developer Blog";
+const url = 'https://chrisko.io/posts';
+const title = 'chrisko Developer Blog';
 const description =
   "I'm sharing my experience with HTML, CSS and JavaScript as a Frontend Engineer, here. I've learnt React, Next.js and I'm jumping into Vue.js, right now!";
+
+const SEO = {
+  title,
+  description,
+  canonical: url,
+  openGraph: {
+    type: 'website',
+    locale: 'en_IT',
+    url: url,
+    title,
+    description,
+    images: [
+      {
+        url: 'https://chrisko.io/images/chrisko-exo-square.png',
+        height: 200,
+        width: 200,
+        alt: title
+      }
+    ]
+  },
+  twitter: {
+    handle: '@CKozalla',
+    site: '@CKozalla',
+    cardType: 'summary'
+  }
+};
+
 const Posts = ({ allPostsData }) => {
   const introduction = "ChrisKo's Developer Blog";
   const subintroduction =
@@ -15,18 +42,12 @@ const Posts = ({ allPostsData }) => {
 
   return (
     <>
-      <NextSeo
-        title={title}
-        description={description}
-        canonical={`${url}/posts`}
-        openGraph={{ url, title, description }}
-      />
+      <NextSeo {...SEO} />
       <BlogIntroduction
         introduction={introduction}
         subintroduction={subintroduction}
         textAlign={'center'}
       />
-      {/* Add Searchbar for Blog Posts */}
       <Cards allPostsData={allPostsData} />
     </>
   );
