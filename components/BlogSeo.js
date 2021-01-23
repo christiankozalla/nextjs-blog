@@ -25,7 +25,7 @@ export default function BlogSeo({ id, title, description, date, url }) {
           ]
         }}
         twitter={{
-          cardType: 'summary',
+          cardType: 'summary_large_image',
           site: '@CKozalla',
           handle: '@CKozalla'
         }}
