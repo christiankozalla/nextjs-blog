@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import React, { useEffect } from 'react';
-import { getAllPostIds, getPostData } from '../../lib/posts';
-import { updatePostAttribute } from '../../lib/updateDb';
-import { format, parseISO } from 'date-fns';
+import Head from "next/head";
+import Image from "next/image";
+import React, { useEffect } from "react";
+import { getAllPostIds, getPostData } from "../../lib/posts";
+import { updatePostAttribute } from "../../lib/updateDb";
+import { format, parseISO } from "date-fns";
 
-import BlogSeo from '../../components/BlogSeo';
+import BlogSeo from "../../components/BlogSeo";
 
 export default function Post({ postData }) {
   // Include Post Header here with Image and FrontMatter
@@ -15,7 +15,7 @@ export default function Post({ postData }) {
   const postUrl = `https://chrisko.io/posts/${postData.id}`;
 
   useEffect(() => {
-    updatePostAttribute(postData.id, 'postViews');
+    updatePostAttribute(postData.id, "postViews");
   });
 
   return (
@@ -33,12 +33,16 @@ export default function Post({ postData }) {
         imageUrl={
           postData.imageUrl
             ? postData.imageUrl
-            : '/images/chrisko-exo-large.png'
+            : "/images/chrisko-exo-large.png"
         }
       />
       <div id="post-header">
         <Image
-          src={postData.imageUrl}
+          src={
+            postData.imageUrl
+              ? postData.imageUrl
+              : "/images/chrisko-exo-large.png"
+          }
           alt="Post Header Image"
           layout="intrinsic"
           height={380}
