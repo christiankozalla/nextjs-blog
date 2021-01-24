@@ -1,6 +1,7 @@
 {
   "name": "chrisko.io",
   "short_name": "chrisko.io",
+  "start_url": "https://chrisko.io",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
