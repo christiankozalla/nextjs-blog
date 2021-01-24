@@ -1,57 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-      <loc>https://chrisko.io</loc>
-    </url>
-
-    <url>
-      <loc>https://chrisko.io/posts</loc>
-    </url>
-    
-    
-    <url>
-      <loc>https://chrisko.io/posts/amazing-github-repos-for-every-web-developer</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/aws-dynamodb-next-js-deploy-vercel</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/css-display-property-explained</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/emit-events-in-vue-to-pass-data-between-components</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/first-next-js-blog-devdiary</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/how-to-make-component-reusable-with-props</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/how-to-preview-your-website-on-social-media-with-meta-tags</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/picking-a-frontend-framework-as-beginner</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/vs-code-shortcuts-for-faster-programming</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/vue-tutorial-build-a-frontend-quiz-app-with-custom-events</loc>
-    </url>
-        
-    <url>
-      <loc>https://chrisko.io/posts/vue-tutorial-frontend-quiz-app-headsup</loc>
-    </url>
-        
-    </urlset>
-  
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://chrisko.io</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/amazing-github-repos-for-every-web-developer</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/aws-dynamodb-next-js-deploy-vercel</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/css-display-property-explained</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/emit-events-in-vue-to-pass-data-between-components</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/first-next-js-blog-devdiary</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/how-to-make-component-reusable-with-props</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/how-to-preview-your-website-on-social-media-with-meta-tags</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/picking-a-frontend-framework-as-beginner</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/vs-code-shortcuts-for-faster-programming</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/vue-tutorial-build-a-frontend-quiz-app-with-custom-events</loc>
+  </url>
+  <url>
+    <loc>https://chrisko.io/posts/vue-tutorial-frontend-quiz-app-headsup</loc>
+  </url>
+</urlset>
