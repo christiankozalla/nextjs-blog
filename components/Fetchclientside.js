@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import useSWR from "swr";
 import styles from "../styles/Fetchclientside.module.css";
 import { FiEye, FiHeart } from "react-icons/fi";
@@ -6,13 +5,6 @@ import { updatePostAttribute } from "../lib/updateDb";
 
 export default function Fetchclientside({ id }) {
   const { data, error } = useSWR(`/api/posts/${id}`);
-
-  const [likeIsClicked, setLikeIsClicked] = useState(false);
-
-  const onLikeBtnClick = (event) => {
-    event.currentTarget.setAttribute("disabled", true);
-    setLikeIsClicked(true);
-  };
 
   if (error) return <div>Failed to load DB</div>;
   if (!data)
@@ -35,11 +27,14 @@ export default function Fetchclientside({ id }) {
         <button
           className={styles.btn}
           onClick={(event) => {
-            onLikeBtnClick(event);
-            updatePostAttribute(id, "postLikes");
+            event.currentTarget.setAttribute("disabled", true);
+            let response = updatePostAttribute(id, "postLikes");
+            if (response) {
+              data.postLikes++;
+            }
           }}
         >
-          {!likeIsClicked ? data.postLikes : parseInt(data.postLikes, 10) + 1}{" "}
+          {data.postLikes}
           <FiHeart className={styles.disableIcon} />
         </button>
       </>

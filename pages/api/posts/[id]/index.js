@@ -1,14 +1,14 @@
 import db from "../../../../lib/db";
 
-export default async function (req, res) {
+export default function (req, res) {
   if (req.method === "GET") {
     const id = req.query.id;
 
     const params = {
       TableName: "devdiary-posts",
       Key: {
-        postId: id,
-      },
+        postId: id
+      }
     };
 
     db.get(params, function (err, data) {
@@ -25,17 +25,17 @@ export default async function (req, res) {
     const params = {
       TableName: "devdiary-posts",
       Key: {
-        postId: id,
+        postId: id
       },
       ExpressionAttributeValues: { ":inc": 1 },
-      UpdateExpression: `ADD ${attribute} :inc`,
+      UpdateExpression: `ADD ${attribute} :inc`
     };
 
     db.update(params, function (err, data) {
       if (err) {
-        console.log("Error", err);
+        console.log("Error chriso", err);
       } else {
-        console.log("Success, updated.", data);
+        res.status(201);
       }
     });
   } else {
@@ -46,6 +46,6 @@ export default async function (req, res) {
 
 export const config = {
   api: {
-    externalResolver: true,
-  },
+    externalResolver: true
+  }
 };
