@@ -15,7 +15,7 @@ export default function Post({ postData }) {
   const postUrl = `https://chrisko.io/posts/${postData.id}`;
 
   useEffect(() => {
-    updatePostAttribute(postData.id, "postViews");
+    updatePostAttribute(`/api/posts/${postData.id}`, "postViews");
   });
 
   return (

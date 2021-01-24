@@ -33,9 +33,9 @@ export default function (req, res) {
 
     db.update(params, function (err, data) {
       if (err) {
-        console.log("Error chriso", err);
+        console.log(err);
       } else {
-        res.status(201);
+        res.status(201).json(data);
       }
     });
   } else {

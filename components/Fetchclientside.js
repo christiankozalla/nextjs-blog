@@ -28,10 +28,7 @@ export default function Fetchclientside({ id }) {
           className={styles.btn}
           onClick={(event) => {
             event.currentTarget.setAttribute("disabled", true);
-            let response = updatePostAttribute(id, "postLikes");
-            if (response) {
-              data.postLikes++;
-            }
+            updatePostAttribute(`api/posts/${id}`, "postLikes");
           }}
         >
           {data.postLikes}
@@ -40,3 +37,9 @@ export default function Fetchclientside({ id }) {
       </>
     );
 }
+
+/* .then((res) => {
+              if (res.status === 201) {
+                data.postLikes += 1;
+              }
+            }); */
