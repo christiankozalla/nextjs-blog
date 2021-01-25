@@ -1,4 +1,4 @@
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import styles from "../styles/Fetchclientside.module.css";
 import { FiEye, FiHeart } from "react-icons/fi";
 import { updatePostAttribute } from "../lib/updateDb";
@@ -28,7 +28,13 @@ export default function Fetchclientside({ id }) {
           className={styles.btn}
           onClick={(event) => {
             event.currentTarget.setAttribute("disabled", true);
-            updatePostAttribute(`api/posts/${id}`, "postLikes");
+            updatePostAttribute(`/api/posts/${id}`, "postLikes")
+              .then((res) => res.json())
+              .then((jsonRes) => {
+                if (jsonRes.data.postLikes) {
+                  mutate(`/api/posts/${id}`);
+                }
+              });
           }}
         >
           {data.postLikes}
@@ -37,9 +43,3 @@ export default function Fetchclientside({ id }) {
       </>
     );
 }
-
-/* .then((res) => {
-              if (res.status === 201) {
-                data.postLikes += 1;
-              }
-            }); */

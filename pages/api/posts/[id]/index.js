@@ -1,6 +1,6 @@
 import db from "../../../../lib/db";
 
-export default function (req, res) {
+export default async function (req, res) {
   if (req.method === "GET") {
     const id = req.query.id;
 
@@ -35,7 +35,7 @@ export default function (req, res) {
       if (err) {
         console.log(err);
       } else {
-        res.status(201).json(data);
+        return res.status(201).json({ data: { postLikes: 1 } });
       }
     });
   } else {
