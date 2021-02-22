@@ -172,7 +172,7 @@
       width="100%"
     />
     <figcaption style="padding-top: 0; padding-left: 2rem; font-style: italic">
-      <strong>Fig. 1</strong>: Overview of IoT architecture
+      <strong>Fig. 1</strong>: Overview of IoT architecture - <a href="https://www.mdpi.com/2076-3417/7/10/1072" target="_blank" rel="noopener">S. Lee et al.</a>
     </figcaption>
   </p>
   <p>
@@ -187,7 +187,7 @@
     />
     <figcaption style="padding-top: 0; padding-left: 2rem; font-style: italic">
       <strong>Fig. 2</strong>: Specific example of an IoT network
-      architecture
+      architecture - <a href="https://dev.arxiv.org/abs/1906.00245v5" target="_blank" rel="noopener">H. Dai et al.</a>
     </figcaption>
   </p>
   <h4>1.2.1 Data security in IoT networks</h4>
@@ -250,7 +250,7 @@
     />
     <figcaption style="padding-top: 0; padding-left: 2rem; font-style: italic">
       <strong>Fig. 3</strong>: Difference between centralized and
-      decentralized IoT networks
+      decentralized IoT networks - <a href="https://doi.org/10.1016/bs.adcom.2018.12.001" target="_blank" rel="noopener">H. F. Atlam</a>
     </figcaption>
   </p>
   <p>
@@ -337,7 +337,7 @@
     />
     <figcaption style="padding-top: 0; padding-left: 2rem; font-style: italic">
       <strong>Fig. 5</strong>: Raspberry Pi to connect IoT sensor and
-      Ethereum Blockchain
+      Ethereum Blockchain - <a href="https://doi.org/10.3390/electronics9020244" target="_blank" rel="noopener">Kurt Peker Y</a>
     </figcaption>
   </p>
   <p>
@@ -417,10 +417,10 @@
     extraordinary computational power for appending a block of data or a
     certain amount of stake, i.e. cryptocurrency, in the network. One
     emerging Blockchain platform designed to serve the purposes of IoT
-    networks could be <a href="TODO" rel="noopener" target="_blank" aria-description="IOTA Blockchain IoT Service">IOTA</a>. It relies on the
+    networks could be <a href="https://www.iota.org/" rel="noopener" target="_blank" aria-description="IOTA Blockchain IoT Service">IOTA</a>. It relies on the
     distributed-ledger technology which Blockchain uses to enable secure
     transfer of data in IoT networks. A similar solution is offered by IBM
-    and the Linux Foundation called <a href="TODO" rel="noopener" target="_blank" aria-label="Hyperledger Fabric Blockchain Service">Hyperledger Fabric</a>,
+    and the Linux Foundation called <a href="https://www.hyperledger.org/use/fabric" rel="noopener" target="_blank" aria-label="Hyperledger Fabric Blockchain Service">Hyperledger Fabric</a>,
     which is a Blockchain distributed-ledger technology enabling the
     development of distributed apps (dApps). Even AWS provides a managed
     blockchain service and a Quantum Ledger Database
@@ -459,3 +459,5 @@
     possible outcomes.
   </p>
 </section>
+
+##
