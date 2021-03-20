@@ -37,18 +37,26 @@ export default function Post({ postData }) {
         }
       />
       <div id="post-header">
-        <Image
-          src={
-            postData.imageUrl
-              ? postData.imageUrl
-              : "/images/chrisko-exo-large.png"
-          }
-          alt="Post Header Image"
-          layout="intrinsic"
-          height={380}
-          width={666}
-        />
-
+        <div className="image-container">
+          <Image
+            src={
+              postData.imageUrl
+                ? postData.imageUrl
+                : "/images/chrisko-exo-large.png"
+            }
+            alt="Post Header Image"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        {postData.imageAttribution ? (
+          <div className="center italic">
+            <span
+              className="small-fonts"
+              dangerouslySetInnerHTML={{ __html: postData.imageAttribution }}
+            ></span>
+          </div>
+        ) : null}
         <div className="center italic">
           <span>
             {postData.author} • {formattedDate} • {postData.readingTime} min.
@@ -70,6 +78,12 @@ export default function Post({ postData }) {
 
         #post-header {
           width: 100%;
+        }
+
+        .image-container {
+          position: relative;
+          width: 100%;
+          height: 380px;
         }
 
         hr {
