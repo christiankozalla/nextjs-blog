@@ -2,8 +2,8 @@
 "title": "The Right Tool for the Job in Frontend Engineering"
 "date": "2021-03-20"
 "author": "Christian Kozalla"
-"shortTitle": ""
-"description": ""
+"shortTitle": "Before starting new projects in Web Development I have been thinking alot about tools I want to use next. But are the tools I have in mind really fit for the job? Here is what I found."
+"description": "Lately, I've been thinking alot about **choosing the right tools and frameworks** for another project. Ok, go ahead and choose. Harder than you think! Because so many tools are damn hot right now - like TailwindCSS. Other tools have been hyped for years and still are - like React. But what if these tools aren't fit for every project? What if they only shine in their specific domain? Here is what I found to choose the right tools depending on the use-case of your web project."
 "imageUrl": "/images/the-right-tool-for-the-job-in-frontend-engineering/fausto-marques-A9dq-L3zzHA-unsplash.jpg"
 "imageAttribution":
   'Photo by <a href="https://unsplash.com/@faustomarques?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fausto Marqués</a> on <a href="/s/photos/tool-for-the-job?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
