@@ -35,8 +35,8 @@ I realized it is essential to have a solid understanding of fundamental concepts
 It is crucial to know, what the values entered in `top`, `left`, `right`, `bottom`, `z-index` _refer_ to!
 
 - `position: static` (default) - `top`, `left`, `right`, `bottom`, `z-index` have no effect
-- `position: absolute` - `top`, `left`, `right`, `bottom` refer to elements nearest [_containing block_](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) (mostly the body element, if no ancestor has a `position` value _other than static_)
-- `position: relative` - `top`, `left`, `right`, `bottom` are relative to the elements original place in the normal flow (as if position was `static`)
+- `position: absolute` - `top`, `left`, `right`, `bottom` refer to element's nearest [_containing block_](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) (mostly the body element, if no ancestor has a `position` value _other than static_)
+- `position: relative` - `top`, `left`, `right`, `bottom` are relative to the element's original place in the normal flow (as if position was `static`)
 - `position: fixed` - `top`, `left`, `right`, `bottom` are relative to to the viewport
 - `position: sticky` - treated like a relatively positioned element until it would exit the viewport. Instead, `top`, `left`, `right`, `bottom` set the distance to the edges of the viewport
 
@@ -62,7 +62,7 @@ With `fixed` and `sticky` positioning it is possible to tell an element to stay 
 
 The above example pushes the element 50px down from the top and 200px away from the left.
 
-- `position: absolute` takes an element out of the normal flow. It usually ends up on the top left corner of the page - unless it has got a parent that's `position` property is _not_ `static` (read more about an elements [nearest containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block))
+- `position: absolute` takes an element out of the normal flow. It usually ends up on the top left corner of the page - unless it has got a parent that's `position` property is _not_ `static` (read more about an element's [nearest containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block))
 - No space is reserved for the element (i.e. no gap in the normal flow)
 
 ### `position: relative`
@@ -102,7 +102,6 @@ To explain all possible values of CSS positioning, I made a CodePen that illustr
 
 - <span style="color: blue;">`position: static` - This is the default value. The element is part of the normal document flow</span>
 - <span style="color: red;">`position: relative` - The element has reserved space in the normal document flow, but can be adjusted <em>relative to its origin</em> with `top`, `left`, `right`, `bottom`, `z-index`</span>
-- <span style="color: yellow;"></span>
 
 ### Another example - Structuring a recipe with `sticky` headlines above each step
 
