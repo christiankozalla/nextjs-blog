@@ -70,8 +70,32 @@ blockquote {
   object-fit: cover;
 }
 
+.post > h2,
+h3 {
+  text-decoration: underline;
+  text-decoration-color: #222;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.post > h2::before {
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 20px;
+  margin-right: 4px;
+  background-image: url("/bullet-opt.svg");
+}
+
 .small-fonts {
   font-size: 0.7rem;
+}
+
+:not(pre) > code {
+  color: #222;
+  background-color: #ccc;
+  padding: 0 0.25rem;
+  border-radius: 2px;
 }
 
 @media (max-width: 500px) {
