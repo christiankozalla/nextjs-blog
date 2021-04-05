@@ -1,9 +1,11 @@
 @font-face {
   font-family: "Rubik";
-  font-style: normal;
+  /*   src: url(/fonts/RubikGX.woff2) format("woff2"); */
+  src: url("/fonts/Rubik-Var-wght.woff2") format("woff2");
   font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: oblique 0deg 20deg;
   font-display: optional;
-  src: url(/fonts/RubikGX.woff2) format("woff2");
 }
 
 html,
@@ -11,13 +13,17 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Rubik", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 500;
+  font-weight: 350;
   line-height: 1.6;
   font-size: 20px;
-  color: black;
+  color: #333;
   background-color: #fafafa;
   width: 100%;
   scroll-behavior: smooth;
+}
+
+.remark-highlight {
+  font-size: 18px;
 }
 
 * {

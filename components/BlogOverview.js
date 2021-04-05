@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { parseISO, format } from 'date-fns';
+import React, { useState } from "react";
+import { parseISO, format } from "date-fns";
 
-import BlogOverviewItem from './BlogOverviewItem';
+import BlogOverviewItem from "./BlogOverviewItem";
 
 const BlogOverview = ({ allPostsData }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   allPostsData.forEach((post) => {
     const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");
