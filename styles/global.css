@@ -1,6 +1,5 @@
 @font-face {
   font-family: "Rubik";
-  /*   src: url(/fonts/RubikGX.woff2) format("woff2"); */
   src: url("/fonts/Rubik-Var-wght.woff2") format("woff2");
   font-weight: 100 900;
   font-stretch: 75% 125%;
@@ -33,6 +32,12 @@ body {
 a {
   color: #333;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
 }
 
 a:visited {
