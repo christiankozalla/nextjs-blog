@@ -26,7 +26,7 @@ export default function Home({
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  const introduction = "Hi! I am Christian Kozalla 👋";
+  const introduction = "Hi! I am Christian 👋";
   const subintroduction =
     "My Blog maps out my Journey to Web Development. Here, I'm going to share my experience with HTML, CSS and JavaScript as a Frontend Engineer. I've learnt React, Next.js and I'm jumping into Vue.js, right now! 🚀";
 
