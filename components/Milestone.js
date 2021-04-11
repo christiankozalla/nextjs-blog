@@ -35,8 +35,8 @@ const Milestone = ({ milestone }) => {
 
         .milestone {
           display: block;
-          width: 50px;
-          height: 50px;
+          width: 60px;
+          height: 60px;
           border-radius: 50%;
           background-color: transparent;
           border: 10px solid gray;
@@ -67,8 +67,8 @@ const Milestone = ({ milestone }) => {
 
         .show {
           display: block;
-          height: 50px;
-          width: 50px;
+          height: 60px;
+          width: 60px;
           margin: 0 auto;
           text-align: center;
           font-size: 2rem;
