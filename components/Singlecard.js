@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { parseISO, format } from 'date-fns';
-import { FiHeart, FiEye, FiTwitter } from 'react-icons/fi';
-import Fetchclientside from '../components/Fetchclientside';
+import Link from "next/link";
+import { parseISO, format } from "date-fns";
+import { FiHeart, FiEye, FiTwitter } from "react-icons/fi";
+import Fetchclientside from "../components/Fetchclientside";
 
 const Singlecard = ({ post }) => {
   const formattedDate = format(parseISO(post.date), "do 'of' MMM ''yy");
@@ -56,8 +56,8 @@ const Singlecard = ({ post }) => {
               paddingRight: 8
             }}
           >
-            chrisko on{' '}
-            <span style={{ verticalAlign: 'middle' }}>
+            chrisko on{" "}
+            <span style={{ verticalAlign: "middle" }}>
               <FiTwitter />
             </span>
           </a>
@@ -82,10 +82,9 @@ const Singlecard = ({ post }) => {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          width: 48%;
           border-radius: 5px;
           margin: 0.3rem 0.3rem;
-          box-shadow: 0 2px 5px #bbb;
+          box-shadow: 0 2px 8px #bbb;
         }
 
         .card-header {
@@ -98,7 +97,7 @@ const Singlecard = ({ post }) => {
           background-size: cover;
           border-radius: 5px 5px 0 0;
           width: 100%;
-          height: 200px;
+          aspect-ratio: 16 / 9;
         }
 
         #description {
@@ -181,7 +180,6 @@ const Singlecard = ({ post }) => {
 
         @media (max-width: 500px) {
           .card-container {
-            width: 100%;
             margin: 0.3rem;
           }
         }

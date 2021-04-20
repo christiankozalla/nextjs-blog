@@ -1,16 +1,16 @@
-import Singlecard from './Singlecard';
+import Singlecard from "./Singlecard";
 
 const Cards = ({ allPostsData }) => {
   const dummyCard = {
-    id: 'give-me-feedback',
-    title: 'Connect with me',
-    date: '2020-06-01',
-    author: 'Christian Kozalla',
-    readingTime: '0',
+    id: "give-me-feedback",
+    title: "Connect with me",
+    date: "2020-06-01",
+    author: "Christian Kozalla",
+    readingTime: "0",
     description:
       "As a young Blogger and Junior Web Developer I'm happy and grateful for your Feedback! If you like to connect with me longterm, follow me on Twitter! I'll tweet out every new post, there. Hope you enjoy my blog!",
-    imageUrl: '/images/Coding-Screen-2.jpg',
-    tags: ['Propose', 'new', 'Topics'],
+    imageUrl: "/images/Coding-Screen-2.jpg",
+    tags: ["Propose", "new", "Topics"],
     isInDb: false,
     isDummy: true
   };
@@ -19,18 +19,24 @@ const Cards = ({ allPostsData }) => {
   allPostsData.length % 2 !== 0 ? allPostsData.push(dummyCard) : null;
 
   return (
-    <div>
-      <div className="flex-row">
+    <div id="cards-wrapper">
+      <div className="grid">
         {allPostsData.map((post) => {
           return <Singlecard key={post.id} post={post} />;
         })}
       </div>
       <style jsx>{`
-        .flex-row {
-          width: 100%;
-          flex-wrap: wrap;
+        #cards-wrapper {
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+
+        .grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
           font-size: 85%;
           margin-top 0.7rem;
+          justify-items: center;
         }
 
         h1 {
@@ -41,8 +47,9 @@ const Cards = ({ allPostsData }) => {
           margin: 0.5rem 0;
         }
 
-        @media (max-width: 500px) {
-          .flex-row {
+        @media (max-width: 700px) {
+          .grid {
+            grid-template-columns: 1fr;
             font-size: 100%;
           }
         }

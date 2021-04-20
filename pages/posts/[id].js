@@ -14,9 +14,9 @@ export default function Post({ postData }) {
   // url for BlogSeo
   const postUrl = `https://chrisko.io/posts/${postData.id}`;
 
-  useEffect(() => {
+  /*   useEffect(() => {
     updatePostAttribute(`/api/posts/${postData.id}`, "postViews");
-  });
+  }, []); */
 
   return (
     <>
