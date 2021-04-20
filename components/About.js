@@ -1,34 +1,34 @@
-import Milestone from '../components/Milestone';
+import Milestone from "../components/Milestone";
 
 const About = () => {
   const milestones = [
     {
       meta: "Husum '89",
       text:
-        'On a Thursday in February, probably rainy and cold, I first saw the bright light of day!',
-      direction: 'row',
-      icon: '👶'
+        "On a Thursday in February, probably rainy and cold, I first saw the bright light of day!",
+      direction: "row",
+      icon: "👶"
     },
     {
       meta: "Kiel '08",
       text:
-        'After graduating from school I spent my days and nights caring for old people!',
-      direction: 'row-reverse',
-      icon: '👵'
+        "After graduating from school I spent my days and nights caring for old people!",
+      direction: "row-reverse",
+      icon: "👵"
     },
     {
       meta: "Dresden '15",
       text:
-        'I graduated not only from school, but even from university. Got a diploma in Materials Engineering!',
-      direction: 'row',
-      icon: '🎓'
+        "I graduated not only from school, but even from university. Got a diploma in Materials Engineering!",
+      direction: "row",
+      icon: "🎓"
     },
     {
       meta: "Lichtenstein '17",
       text:
-        '2017 started out exciting like hell! I married my wonderful wife, became father of two wild and smart kids and still enjoying these wild times heavily!',
-      direction: 'row-reverse',
-      icon: '👪'
+        "2017 started out exciting like hell! I married my wonderful wife, became father of two wild and smart kids and still enjoying these wild times heavily!",
+      direction: "row-reverse",
+      icon: "👪"
     }
   ];
 
@@ -47,6 +47,7 @@ const About = () => {
 
         #about-wrapper {
           width: 100%;
+          padding: 0 0.5rem;
         }
       `}</style>
     </div>

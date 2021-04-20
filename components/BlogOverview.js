@@ -59,6 +59,7 @@ const BlogOverview = ({ allPostsData }) => {
 
         .blog-overview-wrapper {
           width: 100%;
+          padding: 0 0.5rem;
         }
 
         #search-input {
