@@ -8,7 +8,8 @@ export default function Home({
   allPostsData,
   introduction,
   subintroduction,
-  SEO
+  SEO,
+  milestones
 }) {
   return (
     <>
@@ -19,7 +20,7 @@ export default function Home({
         textAlign={"left"}
       />
       <BlogOverview allPostsData={allPostsData} />
-      <About />
+      <About milestones={milestones} />
     </>
   );
 }
@@ -59,12 +60,45 @@ export async function getStaticProps() {
       cardType: "summary"
     }
   };
+
+  const milestones = [
+    {
+      meta: "Husum '89",
+      text:
+        "On a Thursday in February, probably rainy and cold, I first saw the bright light of day!",
+      direction: "row",
+      icon: "👶"
+    },
+    {
+      meta: "Kiel '08",
+      text:
+        "After graduating from school I spent my days and nights caring for old people!",
+      direction: "row-reverse",
+      icon: "👵"
+    },
+    {
+      meta: "Dresden '15",
+      text:
+        "I graduated not only from school, but even from university. Got a diploma in Materials Engineering!",
+      direction: "row",
+      icon: "🎓"
+    },
+    {
+      meta: "Lichtenstein '17",
+      text:
+        "2017 started out exciting like hell! I married my wonderful wife, became father of two wild and smart kids and still enjoying these wild times heavily!",
+      direction: "row-reverse",
+      icon: "👪"
+    }
+  ];
+
   return {
     props: {
       allPostsData,
       introduction,
       subintroduction,
-      SEO
+      SEO,
+      milestones
     }
   };
 }
