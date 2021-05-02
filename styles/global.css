@@ -7,6 +7,10 @@
   font-display: optional;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -25,7 +29,9 @@ body {
   font-size: 18px;
 }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
