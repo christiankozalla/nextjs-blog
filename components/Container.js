@@ -51,10 +51,12 @@ const Container = ({ children }) => {
             min-width: 200px;
             max-width: 794px;
             padding: 1rem 1rem 1rem 1rem;
-            flex-grow: 2;
+            flex-grow: 1;
           }
 
           .content-supplement #twitter-box {
+            min-width: 200px;
+            min-height: 400px;
             padding: 1rem;
             border-radius: 5px;
             box-shadow: 0 2px 8px #bbb;
@@ -186,6 +188,7 @@ const Container = ({ children }) => {
             <a
               class="twitter-timeline"
               href="https://twitter.com/CKozalla"
+              data-dnt="true"
               data-tweet-limit="3"
             >
               Tweets by @CKozalla

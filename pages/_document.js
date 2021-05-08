@@ -13,6 +13,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="UTF-8" />
+          <meta name="twitter:dnt" content="on" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
