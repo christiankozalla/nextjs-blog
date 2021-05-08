@@ -17,52 +17,54 @@ const Singlecard = ({ post }) => {
           })}
         </div>
       )}
-      {post.isInDb ? (
-        <h2>
-          <Link href={`/posts/${post.id}`}>
-            <a className="link">{post.title}</a>
-          </Link>
-        </h2>
-      ) : (
-        <h2>
-          <span className="link">{post.title}</span>
-        </h2>
-      )}
-      <div className="flex-row around">
-        <p className="small-italic">
-          {formattedDate} • {post.readingTime} min.
-        </p>
-        <img
-          className="avatar"
-          src="/images/Avatar_CK_min.jpg"
-          alt="Christians Avatar"
-        />
-      </div>
-      <p id="description">{post.description}</p>
-      <p id="read-more">
-        {!post.isDummy ? (
-          <Link href={`/posts/${post.id}`}>
-            <a className="link" id="read-more-anchor">
-              Read more
-            </a>
-          </Link>
+      <div className="card-body">
+        {post.isInDb ? (
+          <h2>
+            <Link href={`/posts/${post.id}`}>
+              <a className="link">{post.title}</a>
+            </Link>
+          </h2>
         ) : (
-          <a
-            className="link"
-            rel="noopener"
-            target="_blank"
-            href="https://twitter.com/CKozalla"
-            style={{
-              paddingRight: 8
-            }}
-          >
-            chrisko on{" "}
-            <span style={{ verticalAlign: "middle" }}>
-              <FiTwitter />
-            </span>
-          </a>
+          <h2>
+            <span className="link">{post.title}</span>
+          </h2>
         )}
-      </p>
+        <div className="flex-row around">
+          <p className="small-italic">
+            {formattedDate} • {post.readingTime} min.
+          </p>
+          <img
+            className="avatar"
+            src="/images/Avatar_CK_min.jpg"
+            alt="Christians Avatar"
+          />
+        </div>
+        <p id="description">{post.description}</p>
+        <p id="read-more">
+          {!post.isDummy ? (
+            <Link href={`/posts/${post.id}`}>
+              <a className="link" id="read-more-anchor">
+                Read more
+              </a>
+            </Link>
+          ) : (
+            <a
+              className="link"
+              rel="noopener"
+              target="_blank"
+              href="https://twitter.com/CKozalla"
+              style={{
+                paddingRight: 8
+              }}
+            >
+              chrisko on{" "}
+              <span style={{ verticalAlign: "middle" }}>
+                <FiTwitter />
+              </span>
+            </a>
+          )}
+        </p>
+      </div>
       <div className="flex-row between small-italic" id="footer">
         {post.isInDb ? (
           <Fetchclientside id={post.id} />
@@ -98,6 +100,11 @@ const Singlecard = ({ post }) => {
           border-radius: 5px 5px 0 0;
           width: 100%;
           aspect-ratio: 16 / 9;
+        }
+
+        .card-body {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
         }
 
         #description {
@@ -139,7 +146,7 @@ const Singlecard = ({ post }) => {
         }
 
         h2 {
-          padding-left: 0.7rem;
+          margin-left: 0.7rem;
         }
 
         #read-more {
