@@ -8,9 +8,7 @@ const Singlecard = ({ post }) => {
 
   return (
     <div key={post.id} className="card-container">
-      {!post.imageUrl ? (
-        <div></div>
-      ) : (
+      {!post.imageUrl ? null : (
         <div className="card-header">
           {post.tags.map((tag) => {
             return <span key={tag}>{tag}</span>;
@@ -103,6 +101,7 @@ const Singlecard = ({ post }) => {
         }
 
         .card-body {
+          flex-grow: 1;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
         }
