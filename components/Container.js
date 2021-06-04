@@ -1,81 +1,43 @@
 import Link from "next/link";
 import { FiGithub, FiMail, FiTwitter } from "react-icons/fi";
-import { useEffect } from "react";
 
 const Container = ({ children }) => {
-  useEffect(() => {
-    if (typeof window.twttr !== undefined) {
-      window.twttr = (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0],
-          t = window.twttr || {};
-        if (d.getElementById(id)) return t;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-
-        t._e = [];
-        t.ready = function (f) {
-          t._e.push(f);
-        };
-
-        return t;
-      })(document, "script", "twitter-wjs");
-    }
-  }, []);
-
   return (
     <div className="container">
       <style jsx>
         {`
           .container {
+            min-height: 100vh;
+            max-width: 100vw;
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow-x: hidden;
-          }
-
-          .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
           }
 
           .content {
-            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            height: 100%;
+            width: 700px;
             margin: 0 auto;
-          }
-
-          .content-supplement {
-            min-width: 200px;
-            max-width: 794px;
-            padding: 1rem 1rem 1rem 1rem;
-            flex-grow: 1;
-          }
-
-          .content-supplement #twitter-box {
-            min-width: 200px;
-            min-height: 400px;
-            padding: 1rem;
-            border-radius: 5px;
-            box-shadow: 0 2px 8px #bbb;
-            margin: 0 auto;
+            padding: 4rem 1rem 1rem 1rem;
           }
 
           .nav-wrapper {
-            position: sticky;
+            position: fixed;
             top: 0;
-            width: 100vw;
+            width: 700px;
             background-color: #fafafa;
+            margin: 0 auto;
             z-index: 2;
           }
 
           .navigation {
             display: flex;
-            max-width: 1100px;
+            max-width: 700px;
             padding: 1rem;
-            margin: 0 auto;
           }
 
           .navigation a {
@@ -129,7 +91,6 @@ const Container = ({ children }) => {
             .nav-wrapper {
               width: 100vw;
             }
-
             .navigation {
               width: 100%;
               box-sizing: border-box;
@@ -138,6 +99,11 @@ const Container = ({ children }) => {
 
             .nav-right {
               display: none;
+            }
+
+            .content {
+              width: 100vw;
+              box-sizing: border-box;
             }
 
             .footer-content {
@@ -181,21 +147,7 @@ const Container = ({ children }) => {
           </div>
         </nav>
       </div>
-      <div className="flex-container">
-        <div className="content">{children}</div>
-        <aside className="content-supplement">
-          <div id="twitter-box">
-            <a
-              class="twitter-timeline"
-              href="https://twitter.com/CKozalla"
-              data-dnt="true"
-              data-tweet-limit="3"
-            >
-              Tweets by @CKozalla
-            </a>
-          </div>
-        </aside>
-      </div>
+      <div className="content">{children}</div>
       <div className="footer">
         <div className="footer-content">
           {new Date().getUTCFullYear()} Christian Kozalla
