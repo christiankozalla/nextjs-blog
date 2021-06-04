@@ -12,6 +12,7 @@ const Container = ({ children }) => {
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden;
           }
 
           .content {
