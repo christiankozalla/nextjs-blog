@@ -27,13 +27,13 @@ export default function Home({
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  const introduction = "Hi! I am Christian 👋";
+  const introduction = "Hi there! Christian here 👋";
   const subintroduction =
-    "My Blog maps out my Journey to Web Development. Here, I'm going to share my experience with HTML, CSS and JavaScript as a Frontend Engineer. I've learnt React, Next.js and I'm jumping into Vue.js, right now! 🚀";
+    "I like to deepen my skills in TypeScript, Node.js, Docker and Go. In order to solve problems.";
 
   const title = "Christian Kozalla - Web Developer";
   const description =
-    "Self-taught Web Developer, crazy about JavaScript & Frontend Frameworks like React.js, Vue.js, Next.js";
+    "I like to deepen my skills in TypeScript, Node.js, Docker and Go. In order to solve problems.";
 
   const SEO = {
     title,
