@@ -9,7 +9,7 @@
     "sitemap": "cd scripts && node generate-sitemap.js && git add ../public/sitemap.xml"
   },
   "dependencies": {
-    "aws-sdk": "^2.914.0",
+    "aws-sdk": "^2.1354.0",
     "date-fns": "^2.21.3",
     "gray-matter": "^4.0.3",
     "next": "^12.1.0",
